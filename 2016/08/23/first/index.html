@@ -84,16 +84,40 @@
 
 
 
-<meta name="description" content="0x00 前期准备    一、环境：macbook，vps（纯净centos 6.2）    二、博客版本：hexo        为什么选择 Hexo 呢？        1、喜欢Hexo的主题，不少都适合中文        2、配置简单，一键发布        3、创作者是台湾人，支持一下国人的开发成果！        4、安全。。hexo自动将网页转换成静态html，不需要php或mysql">
+<meta name="description" content="0x00 前期准备
+一、环境：macbook，vps（纯净centos 6.2）
+二、博客版本：hexo
+    为什么选择 Hexo 呢？
+    1、喜欢Hexo的主题，不少都适合中文
+    2、配置简单，一键发布
+    3、创作者是台湾人，支持一下国人的开发成果！
+    4、安全。。hexo自动将网页转换成静态html，不需要php或mysql，vps系统占用资源少。
+    5、一个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用hexo创建个人博客">
 <meta property="og:url" content="http://yoursite.com/2016/08/23/first/index.html">
 <meta property="og:site_name" content="非色的天">
-<meta property="og:description" content="0x00 前期准备    一、环境：macbook，vps（纯净centos 6.2）    二、博客版本：hexo        为什么选择 Hexo 呢？        1、喜欢Hexo的主题，不少都适合中文        2、配置简单，一键发布        3、创作者是台湾人，支持一下国人的开发成果！        4、安全。。hexo自动将网页转换成静态html，不需要php或mysql">
-<meta property="og:updated_time" content="2016-08-25T04:16:58.000Z">
+<meta property="og:description" content="0x00 前期准备
+一、环境：macbook，vps（纯净centos 6.2）
+二、博客版本：hexo
+    为什么选择 Hexo 呢？
+    1、喜欢Hexo的主题，不少都适合中文
+    2、配置简单，一键发布
+    3、创作者是台湾人，支持一下国人的开发成果！
+    4、安全。。hexo自动将网页转换成静态html，不需要php或mysql，vps系统占用资源少。
+    5、一个">
+<meta property="og:updated_time" content="2016-08-25T04:20:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用hexo创建个人博客">
-<meta name="twitter:description" content="0x00 前期准备    一、环境：macbook，vps（纯净centos 6.2）    二、博客版本：hexo        为什么选择 Hexo 呢？        1、喜欢Hexo的主题，不少都适合中文        2、配置简单，一键发布        3、创作者是台湾人，支持一下国人的开发成果！        4、安全。。hexo自动将网页转换成静态html，不需要php或mysql">
+<meta name="twitter:description" content="0x00 前期准备
+一、环境：macbook，vps（纯净centos 6.2）
+二、博客版本：hexo
+    为什么选择 Hexo 呢？
+    1、喜欢Hexo的主题，不少都适合中文
+    2、配置简单，一键发布
+    3、创作者是台湾人，支持一下国人的开发成果！
+    4、安全。。hexo自动将网页转换成静态html，不需要php或mysql，vps系统占用资源少。
+    5、一个">
 
 
 
@@ -276,8 +300,52 @@
       
 
       
-        <p>0x00 前期准备<br>    一、环境：macbook，vps（纯净centos 6.2）<br>    二、博客版本：hexo<br>        为什么选择 Hexo 呢？<br>        1、喜欢Hexo的主题，不少都适合中文<br>        2、配置简单，一键发布<br>        3、创作者是台湾人，支持一下国人的开发成果！<br>        4、安全。。hexo自动将网页转换成静态html，不需要php或mysql，vps系统占用资源少。<br>        5、一个命令就可以搞定. “hexo d”就能将本地写好的文章进行上传，无需进入后台。<br>    三、GitHub<br>        在一个朋友的强烈建议下，弃用wordpress。<br>        参阅了很多文章之后，选择了hexo+GitHub+vps的模式：在本地搭建好hexo之后，将hexo生成的html静态文件上传至github（https:su89.github.io）和vps(210.245.210.223)上。<br>没有vps的朋友，只需要看第一步就可以免费搭建类似https:su89.github.io的个人博客。</p>
-<p>0x01 本地搭建hexo<br>     1)环境搭建<br>        安装git （因为要给github上传文章）    #brew install git<br>        安装Node.js（因为Hexo是基于Node.js开发的）<br>     2)安装和配置Hexo<br>     以下命令都是直接复制粘贴到电脑终点运行的,上面的环境配置成功以后就可以使用npm安装Hexo了<br>     npm install -g hexo-cli<br>     然后在本地目录创建一个文件夹,比如我创建的是一个Hexo文件夹<br>     然后cd到Hexo文件夹，也就是进去这个文件夹<br>     然后依次执行下面的命令<br>     hexo init<br>     npm install<br>     如果出现很多串代码的话，没有什么明显的错误就表示安装成功。<br>     然后启动本地这个Hexo服务<br>     hexo server<br>     然后打开浏览器，输入<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> 有内容证明Hexo安装成功<br>     3）配置github仓库<br>     github官网(<a href="http://www.github.com" target="_blank" rel="external">http://www.github.com</a>)<br>     注册账号我就不用说了吧，都很简单,然后创建一个的放博客文章的仓库，点击Crete a repositor。<br>     创建的repositor用户名.github.io（例如:su89.github.com）必须是这个结构，不能有一点偏差。就按照我的方式创建就行，只需要把用户名改为你的.然后点击创建，会初始化一个空的仓库.<br>     4) 配置<br>     因为我的macbook已经安装github desktop。SSH配置好了，下面配置本地Hexo<br>        打开Hexo目录下的_config.yml，拉倒最下面<br>        deploy:<br>              type: git<br>              repository: <a href="https://github.com/codertian/codertian.github.io.git" target="_blank" rel="external">https://github.com/codertian/codertian.github.io.git</a><br>              branch: master<br>        保存，cd到Hexo的根目录<br>        依次执行下面的命令<br>        hexo clean<br>        hexo g<br>        hexo d<br>到这一步的时候，你已经拥有了一个自己的个人博客（网址为https:你的用户名.github.io）。<br>下面的步骤适用于拥有个人vps的人，把网站搭建到自己的vps上。</p>
+        <p>0x00 前期准备</p>
+<pre><code>一、环境：macbook，vps（纯净centos 6.2）
+二、博客版本：hexo
+    为什么选择 Hexo 呢？
+    1、喜欢Hexo的主题，不少都适合中文
+    2、配置简单，一键发布
+    3、创作者是台湾人，支持一下国人的开发成果！
+    4、安全。。hexo自动将网页转换成静态html，不需要php或mysql，vps系统占用资源少。
+    5、一个命令就可以搞定. “hexo d”就能将本地写好的文章进行上传，无需进入后台。
+三、GitHub
+    在一个朋友的强烈建议下，弃用wordpress。
+    参阅了很多文章之后，选择了hexo+GitHub+vps的模式：在本地搭建好hexo之后，将hexo生成的html静态文件上传至github（https:su89.github.io）和vps(210.245.210.223)上。
+</code></pre><p>没有vps的朋友，只需要看第一步就可以免费搭建类似https:su89.github.io的个人博客。</p>
+<p>0x01 本地搭建hexo</p>
+<pre><code>1)环境搭建
+   安装git （因为要给github上传文章）    #brew install git
+   安装Node.js（因为Hexo是基于Node.js开发的）
+2)安装和配置Hexo
+以下命令都是直接复制粘贴到电脑终点运行的,上面的环境配置成功以后就可以使用npm安装Hexo了
+npm install -g hexo-cli
+然后在本地目录创建一个文件夹,比如我创建的是一个Hexo文件夹
+然后cd到Hexo文件夹，也就是进去这个文件夹
+然后依次执行下面的命令
+hexo init
+npm install
+如果出现很多串代码的话，没有什么明显的错误就表示安装成功。
+然后启动本地这个Hexo服务
+hexo server
+然后打开浏览器，输入http://0.0.0.0:4000/ 有内容证明Hexo安装成功
+3）配置github仓库
+github官网(http://www.github.com)
+注册账号我就不用说了吧，都很简单,然后创建一个的放博客文章的仓库，点击Crete a repositor。
+创建的repositor用户名.github.io（例如:su89.github.com）必须是这个结构，不能有一点偏差。就按照我的方式创建就行，只需要把用户名改为你的.然后点击创建，会初始化一个空的仓库.
+4) 配置
+因为我的macbook已经安装github desktop。SSH配置好了，下面配置本地Hexo
+   打开Hexo目录下的_config.yml，拉倒最下面
+   deploy:
+         type: git
+         repository: https://github.com/codertian/codertian.github.io.git
+         branch: master
+   保存，cd到Hexo的根目录
+   依次执行下面的命令
+   hexo clean
+   hexo g
+   hexo d
+</code></pre><p>到这一步的时候，你已经拥有了一个自己的个人博客（网址为https:你的用户名.github.io）。<br>下面的步骤适用于拥有个人vps的人，把网站搭建到自己的vps上。</p>
 <p>0x02 vps上搭建nginx</p>
 <pre><code>1)ssh root@210.245.210.222
 ssh连接vps，出现“REMOTE HOST IDENTIFICATION HAS CHANGED”错误。因为我的vps被重装了，rsa key被更改了！
