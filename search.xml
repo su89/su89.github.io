@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title><![CDATA[v2ray+cloudflare打造专属vpn]]></title>
+      <url>http://www.dz119.com/2019/07/06/v2ray-cloudflare%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9Evpn/</url>
+      <content type="html"><![CDATA[<p>@<a href="&#x201C;&#x677F;&#x74E6;&#x5DE5;vps+v2ray+cloudflare&#x4E91;&#x52A0;&#x901F;&#x201D;&#x6253;&#x9020;&#x4E13;&#x5C5E;vpn">TOC</a></p>
+<h1 id="&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN"><a href="#&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN" class="headerlink" title="&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN"></a>&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN</h1><p>&#x8FD1;&#x671F;&#xFF0C;&#x5C01;&#x7981;ip&#x7684;&#x60C5;&#x51B5;&#x8F83;&#x4E3A;&#x7A81;&#x51FA;&#x3002;&#x53EA;&#x6709;&#x4E0D;&#x65AD;&#x7684;&#x52AA;&#x529B;&#x624D;&#x80FD;&#x4F7F;&#x7528;vpn<br><a id="more"></a></p>
+<h2 id="&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS"><a href="#&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS" class="headerlink" title="&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS"></a>&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS</h2><p>&#x60F3;&#x8981;&#x642D;&#x5EFA; V2Ray&#xFF0C; &#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x4E2A;&#x4EBA; VPS&#xFF08;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#xFF09; &#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;<br>&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#xFF1A;&#x642C;&#x74E6;&#x5DE5;&#xFF08;Bandwagon Host&#xFF09; VPS &#x6765;&#x642D;&#x5EFA; V2Ray&#xFF0C;&#x642C;&#x74E6;&#x5DE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x4E2D;&#x56FD;&#x7528;&#x6237;&#x6781;&#x5EA6;&#x53CB;&#x597D;&#x7684; VPS &#x5546;&#x5BB6;&#xFF0C;&#x6709;&#x9999;&#x6E2F;&#xFF0C;&#x7F8E;&#x56FD;&#x6D1B;&#x6749;&#x77F6;CN2 &#x7B49;&#x7EBF;&#x8DEF;&#x4E0E;cloudflare&#x65E0;&#x7F1D;&#x5BF9;&#x63A5;&#xFF0C;&#x652F;&#x6301;&#x652F;&#x4ED8;&#x5B9D;&#x4ED8;&#x6B3E;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x662F;&#x652F;&#x6301;&#x9000;&#x6B3E;&#x7684;&#xFF01;<br><img src="https://img-blog.csdnimg.cn/20190605222905951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70" alt="&#x5B89;&#x88C5;debian9&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"><br><img src="https://img-blog.csdnimg.cn/20190605223018758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70" alt="&#x83B7;&#x53D6;vps&#x7684;&#x767B;&#x9646;&#x7AEF;&#x53E3;&#x548C;&#x767B;&#x9646;&#x5BC6;&#x7801;"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;shadowsocks&#xFF0C;&#x53EF;&#x7559;&#x5B58;&#x4F46;&#x65E0;&#x592A;&#x5927;&#x610F;&#x4E49;&#xFF0C;&#x56E0;&#x4E3A;ss&#x4E5F;&#x4F1A;&#x88AB;&#x5C01;&#x4E86;</span></div><div class="line">wget --no-check-certificate -O shadowsocks-libev.sh https:<span class="comment">//raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh &amp;&amp; bash shadowsocks-libev.sh</span></div></pre></td></tr></table></figure></p>
+<h2 id="xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5;-V2Ray"><a href="#xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5;-V2Ray" class="headerlink" title="xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5; V2Ray"></a>xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5; V2Ray</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;v2ray</span></div><div class="line">bash &lt;(curl -s -L https:<span class="comment">//git.io/v2ray.sh)</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x5982;&#x679C;&#x63D0;&#x793A; curl: command not found &#xFF0C;&#x90A3;&#x662F;&#x56E0;&#x4E3A;&#x4F60;&#x7684; VPS &#x6CA1;&#x88C5; Curl<br>ubuntu/debian &#x7CFB;&#x7EDF;&#x5B89;&#x88C5; Curl &#x65B9;&#x6CD5;: apt-get update -y &amp;&amp; apt-get install curl -y<br>centos &#x7CFB;&#x7EDF;&#x5B89;&#x88C5; Curl &#x65B9;&#x6CD5;: yum update -y &amp;&amp; yum install curl -y<br>&#x5B89;&#x88C5;&#x597D; curl &#x4E4B;&#x540E;&#x5C31;&#x80FD;&#x5B89;&#x88C5;&#x811A;&#x672C;&#x4E86;</p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5B89;&#x88C5;netstat&#x547D;&#x4EE4;</p>
+</blockquote>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;netstat</span></div><div class="line">apt-get install net-tools</div></pre></td></tr></table></figure>
+<h2 id="&#x6CE8;&#x518C;freenom-com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"><a href="#&#x6CE8;&#x518C;freenom-com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;" class="headerlink" title="&#x6CE8;&#x518C;freenom.com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"></a>&#x6CE8;&#x518C;freenom.com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;</h2><p>&#x5728; DNS &#x9009;&#x9879;&#x5361;&#x90A3;&#x8FB9;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; A &#x8BB0;&#x5F55;&#x7684;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x5047;&#x8BBE;&#x4F60;&#x7684;&#x57DF;&#x540D;&#x662F; 233blog.com&#xFF0C;&#x5E76;&#x4E14;&#x60F3;&#x8981;&#x4F7F;&#x7528; www.233blog.com &#x4F5C;&#x4E3A;&#x7FFB;&#x5899;&#x7684;&#x57DF;&#x540D;&#x3002;&#x90A3;&#x4E48;&#x5728; DNS &#x90A3;&#x91CC;&#x914D;&#x7F6E;&#xFF0C;Name &#x5199; www&#xFF0C;IPv4 address &#x5199;&#x4F60;&#x7684; VPS IP&#xFF0C;&#x52A1;&#x5FC5;&#x628A;&#x4E91;&#x6735;&#x70B9;&#x7070;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9; Add Record &#x6765;&#x6DFB;&#x52A0;&#x89E3;&#x6790;&#x8BB0;&#x5F55;&#x5373;&#x53EF;&#x3002;(&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x8BF7;&#x52A1;&#x5FC5;&#x628A;&#x4E91;&#x6735;&#x70B9;&#x7070;&#xFF0C;&#x5373;&#x662F; DNS only)</p>
+<h2 id="&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket-TLS"><a href="#&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket-TLS" class="headerlink" title="&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket + TLS"></a>&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket + TLS</h2><p>&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x9009;&#x62E9; WebSocket + TLS (&#x5373;&#x662F;&#x9009;&#x62E9; 4 )&#xFF0C;V2Ray &#x7AEF;&#x53E3;&#x968F;&#x4FBF;&#xFF0C;&#x4E0D;&#x8981;&#x662F; 80 &#x548C; 443 &#x5373;&#x53EF;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x57DF;&#x540D;&#x89E3;&#x6790; Y &#xFF0C;&#x81EA;&#x52A8;&#x914D;&#x7F6E; TLS &#x4E5F;&#x662F; Y &#xFF0C;&#x5176;&#x4ED6;&#x5C31;&#x9ED8;&#x8BA4;&#x5427;&#xFF0C;&#x4E00;&#x8DEF;&#x56DE;&#x8F66;&#x3002;&#x7B49;&#x5F85;&#x5B89;&#x88C5;&#x5B8C;&#x6210;<br>&#x5982;&#x679C;&#x4F60;&#x7684;&#x57DF;&#x540D;&#x6CA1;&#x6709;&#x6B63;&#x786E;&#x89E3;&#x6790;&#xFF0C;&#x5B89;&#x88C5;&#x4F1A;&#x5931;&#x8D25;&#xFF0C;&#x89E3;&#x6790;&#x76F8;&#x5173;&#x770B;&#x4E0A;&#x9762;&#x7684; &#x6DFB;&#x52A0;&#x57DF;&#x540D;&#x89E3;&#x6790;</p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x5C55;&#x793A; V2Ray &#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#x7B49;&#xFF0C;&#x4E0D;&#x7528;&#x7BA1;&#x5B83;&#xFF0C;&#x76F4;&#x63A5;&#x56DE;&#x8F66;</p>
+<p>&#x7136;&#x540E;&#x8F93;&#x5165; v2ray status &#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD; V2Ray &#x548C; Caddy &#x90FD;&#x5728;&#x8FD0;&#x884C;</p>
+<h2 id="&#x8BBE;&#x7F6E;-Crypto-&#x548C;-&#x5F00;&#x542F;&#x4E2D;&#x8F6C;"><a href="#&#x8BBE;&#x7F6E;-Crypto-&#x548C;-&#x5F00;&#x542F;&#x4E2D;&#x8F6C;" class="headerlink" title="&#x8BBE;&#x7F6E; Crypto &#x548C; &#x5F00;&#x542F;&#x4E2D;&#x8F6C;"></a>&#x8BBE;&#x7F6E; Crypto &#x548C; &#x5F00;&#x542F;&#x4E2D;&#x8F6C;</h2><p>&#x786E;&#x4FDD; Cloudflare &#x7684; Crypto &#x9009;&#x9879;&#x5361;&#x7684; SSL &#x4E3A; Full<br>&#x5E76;&#x4E14;&#x8BF7;&#x786E;&#x4FDD; SSL &#x9009;&#x9879;&#x5361;&#x6709;&#x663E;&#x793A; Universal SSL Status Active Certificate &#x8FD9;&#x6837;&#x7684;&#x5B57;&#x773C;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684; SSL &#x9009;&#x9879;&#x5361;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x8FD9;&#x4E2A;&#xFF0C;&#x4E0D;&#x8981;&#x6025;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x7533;&#x8BF7;&#x8BC1;&#x4E66;&#xFF0C;24 &#x5C0F;&#x65F6;&#x5185;&#x53EF;&#x4EE5;&#x641E;&#x5B9A;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x5728; DNS &#x9009;&#x9879;&#x5361;&#x90A3;&#x91CC;&#xFF0C;&#x628A;&#x521A;&#x624D;&#x70B9;&#x7070;&#x7684;&#x90A3;&#x4E2A;&#x4E91;&#x6735;&#x56FE;&#x6807;&#xFF0C;&#x70B9;&#x4EAE;&#x5B83;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x70B9;&#x4EAE;&#x4E00;&#x5B9A;&#x8981;&#x70B9;&#x4EAE;&#x4E00;&#x5B9A;&#x8981;&#x70B9;&#x4EAE;</p>
+<p>&#x4E91;&#x6735;&#x56FE;&#x6807;&#x52A1;&#x5FC5;&#x4E3A;&#x6A59;&#x8272;&#x72B6;&#x6001;&#xFF0C;&#x5373;&#x662F; DNS and HTTP proxy(CDN)</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[继续开始]]></title>
+      <url>http://www.dz119.com/2018/07/16/5/</url>
+      <content type="html"><![CDATA[<p>##&#x6211;&#x8FD8;&#x662F;&#x6211;</p>
+<p>###&#x547D;&#x9014;&#x591A;&#x821B;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><code>test</code><br><code>pwd</code></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[一次ddos攻击分析]]></title>
       <url>http://www.dz119.com/2016/08/29/3/</url>
       <content type="html"><![CDATA[<p>&#x4E00;&#x4E2A;&#x670B;&#x53CB;&#x7684;&#x7F51;&#x7AD9;&#x906D;&#x53D7;ddos&#x653B;&#x51FB;&#xFF0C;&#x201C;&#x6D41;&#x91CF;&#x975E;&#x5E38;&#x5F02;&#x5E38;&#xFF0C;&#x4F46;&#x662F;&#x8BBF;&#x95EE;&#x7F51;&#x7AD9;&#x5E76;&#x4E0D;&#x592A;&#x5F02;&#x5E38;&#x201D;&#x3002;&#x8BF7;&#x6C42;&#x5E2E;&#x5FD9;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;&#x6211;&#x8BA9;&#x4ED6;&#x5728;&#x906D;&#x53D7;&#x653B;&#x51FB;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x6293;&#x5305;&#x3002;<br>&#x5728;&#x4ECA;&#x5929;18&#x70B9;&#x63A5;&#x5230;&#x4E86;&#x4E00;&#x4E2A;ddos-2016080217-121.19&#xFF0A;.&#xFF0A;&#xFF0A;.&#xFF0A;&#xFF0A;.cap&#x7684;&#x6587;&#x4EF6;&#x3002;<br>&#x9996;&#x5148;&#x5BFC;&#x5165;kali linux&#x865A;&#x62DF;&#x673A;&#x4E2D;&#x7528;wireshark&#x6253;&#x5F00;&#xFF08;&#x672C;&#x4EBA;&#x6700;&#x8FD1;&#x8FF7;&#x604B;macbook&#xFF0C;&#x53EA;&#x88C5;&#x4E86;kali&#x865A;&#x62DF;&#x673A;&#xFF09;&#x3002;<br><a id="more"></a></p>
@@ -22,135 +55,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[60元搭建顶级域名个人博客]]></title>
-      <url>http://www.dz119.com/2016/08/27/2/</url>
-      <content type="html"><![CDATA[<h2 id="购置顶级域名"><a href="#购置顶级域名" class="headerlink" title="购置顶级域名"></a>购置顶级域名</h2><blockquote>
-<p>肯定不能在国内注册了，解析太麻烦（且随时会有被停止解析的风险）。。</p>
-</blockquote>
-<p>申请免费域名 ＊＊＊.ga成功，但是总觉得不舒服，特别是解析主机的时候。<br>注册收费的顶级域名服务商介绍:</p>
-<ul>
-<li>域名注册商namecheap。坏处：不可以用支付宝付款。价格还算便宜，从cheap就可以得知。</li>
-<li>域名注册商godaddy。好处：最知名的域名注册商，可以用支付宝付款。坏处:但不能做注册资料隐藏，得另外加钱。</li>
-<li>域名注册商namesilo。好处：知名的域名注册商，可以用支付宝付款。特别好处：注册资料隐藏不收费。<blockquote>
-<p>最终选择了namasilo，花了60大洋。我的顶级域名www.dz119.com，大家可以whois一下我的站。</p>
-</blockquote>
-</li>
-</ul>
-<a id="more"></a>
-<h2 id="准备vps或个人"><a href="#准备vps或个人" class="headerlink" title="准备vps或个人"></a>准备vps或个人</h2><p>为了不用备案，继续选择境外的空间或vps。。免费空间ping值太高，打开速度慢。<br>最终选择了vps方案，因为vps顺便可以做一个vpn。。对于非技术控，总想着google一下。<br>vps类似一台服务器，但是从服务器中虚拟化出来的。</p>
-<h3 id="在选择vps的时候，倾向于香港或韩国的vps。因为ping值较低，和在国内的服务器差别不大。"><a href="#在选择vps的时候，倾向于香港或韩国的vps。因为ping值较低，和在国内的服务器差别不大。" class="headerlink" title="在选择vps的时候，倾向于香港或韩国的vps。因为ping值较低，和在国内的服务器差别不大。"></a>在选择vps的时候，倾向于香港或韩国的vps。因为ping值较低，和在国内的服务器差别不大。</h3><p>最终选择了朋友以前送的免费vps，ping值在40-60ms左右。 很想购置<strong>香港沙田的电信cn2服务器</strong>，非常稳定，但一个月要接近50元，以后拉到赞助再说。</p>
-<h2 id="准备框架模版"><a href="#准备框架模版" class="headerlink" title="准备框架模版"></a>准备框架模版</h2><p>hexo是最好的选择。。经常更新。正在编辑的时候，4.6版本已经出来了。主题就如你们看到的这样，我选择了simple的简介版本，看起来还是比较舒服。</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[利用hexo创建个人博客]]></title>
-      <url>http://www.dz119.com/2016/08/23/1/</url>
-      <content type="html"><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ol>
-<li>环境：macbook，vps（纯净centos 6.2）</li>
-<li><p>博客版本：hexo</p>
-<pre><code>&gt; 为什么选择 Hexo 呢？
-
-- 喜欢Hexo的主题，不少都适合中文
-- 配置简单，一键发布
-- 创作者是台湾人，支持一下国人的开发成果！
-- 安全。。hexo自动将网页转换成静态html，不需要php或mysql，vps系统占用资源少。
-- 一个命令就可以搞定. “hexo d”就能将本地写好的文章进行上传，无需进入后台。
-</code></pre><a id="more"></a></li>
-<li>GitHub<br>在一个朋友的强烈建议下，弃用wordpress。<br> 参阅了很多文章之后，选择了hexo+GitHub+vps的模式<br>在本地搭建好hexo之后，将hexo生成的html静态文件上传至github（https:su89.github.io）和vps(210.245.210.223)上。<blockquote>
-<p>没有vps的朋友，只需要看第一步就可以免费搭建类似https:su89.github.io的个人博客。</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="本地搭建hexo"><a href="#本地搭建hexo" class="headerlink" title="本地搭建hexo"></a>本地搭建hexo</h2><ol>
-<li>环境搭建<br> 安装git （因为要给github上传文章）    #brew install git<br> 安装Node.js（因为Hexo是基于Node.js开发的）</li>
-<li>安装和配置Hexo<br>  以下命令都是直接复制粘贴到电脑终点运行的,上面的环境配置成功以后就可以使用npm安装Hexo了<br>  <code>npm install -g hexo-cli</code><br>  然后在本地目录创建一个文件夹,比如我创建的是一个Hexo文件夹<br>  然后cd到Hexo文件夹，也就是进去这个文件夹<br>  然后依次执行下面的命令<br>  <code>hexo init
-  npm install</code><br>  如果出现很多串代码的话，没有什么明显的错误就表示安装成功。<br>  然后启动本地这个Hexo服务<br>  <code>hexo server</code><br>  然后打开浏览器，输入<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> 有内容证明Hexo安装成功</li>
-<li>配置github仓库<br>  github官网(<a href="http://www.github.com" target="_blank" rel="external">http://www.github.com</a>)<br>  注册账号我就不用说了吧，都很简单,然后创建一个的放博客文章的仓库，点击Crete a repositor。<br>  创建的repositor用户名.github.io（例如:su89.github.com）必须是这个结构，不能有一点偏差。就按照我的方式创建就行，只需要把用户名改为你的.然后点击创建，会初始化一个空的仓库.</li>
-<li>配置<br>  因为我的macbook已经安装github desktop。SSH配置好了，下面配置本地Hexo<pre><code>打开Hexo目录下的_config.yml，拉倒最下面
-`deploy:
-      type: git
-      repository: https://github.com/codertian/codertian.github.io.git
-      branch: master
-保存，cd到Hexo的根目录
-依次执行下面的命令
-hexo clean
-hexo g
-hexo d`
-</code></pre>到这一步的时候，你已经拥有了一个自己的个人博客（网址为https:你的用户名.github.io）。<br>下面的步骤适用于拥有个人vps的人，把网站搭建到自己的vps上。</li>
-</ol>
-<h2 id="vps上搭建nginx"><a href="#vps上搭建nginx" class="headerlink" title="vps上搭建nginx"></a>vps上搭建nginx</h2><ol>
-<li>ssh root@210.245.210.222<br>  ssh连接vps，出现“REMOTE HOST IDENTIFICATION HAS CHANGED”错误。因为我的vps被重装了，rsa key被更改了！<br>  解决办法：vi ~/.ssh/known_hosts<pre><code>删除210.245.210.222的相关rsa的信息即可.
-</code></pre></li>
-<li>配置硬盘<br>  `yum list installed |grep “httpd”    ＃mysql,vnc,nginx等等<br>  netstat -ano                        ＃先看看有没有安装什么东西<br>  fdisk -l                            ＃发现/dev/sdb1未被挂载<br>  mkdir /data                         ＃在根目录创建data文件夹<br>  mount /dev/sdb1 /data               ＃将/dev/sdb1挂载<br>  df -Th                              ＃查看/dev/sdb1的文件系统，为ext4<br>  vi /etc/fstab                       #在其中添加/dev/sdb1 /data  ext4  defaults  0 0设置开机启动``</li>
-<li><p>安装nginx<br>  <code>wget http://nginx.org/download/nginx-1.11.3.tar.gz   下载tar.gz安装包失败，因为域名没有解析
-  vi /etc/sysconfig/network-scripts/ifcfg-eth0 ＃或vi /etc/resolv.conf  修改dns服务器为8.8.8.8或8.8.4.4</code></p>
-<pre><code>再次下载成功，正式开始安装 Nginx：
-
-* 创建Nginx专用用户与用户组
-`[root@widlabs ~]# groupadd www                 添加组www
-[root@widlabs ~]# useradd -s /sbin/nologin -M -g www nginx`
-* 安装Nginx所需依赖
-`[root@widlabs ~]# yum install pcre-devel
-[root@widlabs ~]# yum install zlib-devel`
-* 进行nginx编译安装
-``[root@widlabs ~]# cd /home/upload        #进入nginx源码包所在目录
-[root@widlabs upload]# tar tar zxvf nginx-1.6.0.tar.gz
-[root@widlabs upload]# cd nginx-1.6.0
-[root@widlabs nginx-1.6.0]# ./configure --prefix=/usr/local/nginx --user=nginx --group=www --with-pcre
-[root@widlabs nginx-1.6.0]# make
-[root@widlabs nginx-1.6.0]# make install
-
-安装成功！！！
-mkdir /data/www        #创建网页存放目录
-chmod -R nginx.www www #将文件修改为www用户组中nginx用户控制权限
-chmod -R  777 www      ＃权限全开吧，无所谓，反正是静态网站。``
-</code></pre></li>
-</ol>
-<h2 id="deploy配置"><a href="#deploy配置" class="headerlink" title="deploy配置"></a>deploy配置</h2><ol>
-<li>在 Hexo 目录下安装 rsync</li>
-<li>本地macbook上运行：$ npm install hexo-deployer-rsync –save</li>
-<li><p>根据在 Hexo 中的 _config.yml 中添加 Deploy 的配置，以下是我在自己项目中的配置代码，向github和vps同时上传hexo中public文件<br>   deploy:</p>
-<ul>
-<li>type: git<br>repository: git@github.com:su89/su89.github.io.git<br>branch: master</li>
-<li><p>type: rsync<br>host: 你 VPS 的 IP 地址或者域名<br>user: root<br>root: 你想将 Hexo 生成的静态文件存放在 VPS 中的目录 例如: /www/hexo/blog/<br>port: 你 VPS 的 ssh 端口号<br>delete: true<br>verbose: true<br>ignore_errors: false<br>*必须先在 VPS 上创建好了想要存放 Hexo 静态文件的目录， rsync 不能创建不存在的目录</p>
-<p>我看网上有的朋友说光在 Hexo 中使用 rsync 不够，在 VPS 也需要下载 rsync 服务，但是我在搬瓦工(又打了一次广告，搬瓦工是不是应该给我付点小费啊)上就没有下载 rsync 服务。如果你在 Hexo 中用 rsync 部署的时候一直报错，那就在 VPS 上下载 rsync 服务，看能否解决一直出错的原因，命令如下<br>$ yum -y install rsync</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h2><pre><code>Hexo 成功部署到 VPS 上之后，剩下的就是在vps上来配置 Nginx 了
-``[root@widlabs ~]# cd /usr/local/nginx/conf
-[root@widlabs conf]# cp nginx.conf nginx.conf.bak
-[root@widlabs conf]# vi nginx.conf
-    修改nginx.conf文件：
-    server {
-        listen       80;
-        server_name  widlabs.com www.widlabs.com;            #网站域名
-        location / {
-            root   /data/www;                      #你存放hexo文件的位置
-            index  index.html index.htm index.php;        #添加 index.php
-        }
-
-[root@widlabs html]# /usr/local/nginx/sbin/nginx                        #启动Nginx
-[root@widlabs html]# /usr/local/nginx/sbin/nginx -s stop                #停止Nginx
-[root@widlabs html]# /usr/local/nginx/sbin/nginx -s reload              #重启Nginx``
-这样设置之后网站就应该还不能通过 VPS 的 IP 地方访问到。因为80端口不能被访问。
-需要继续配置vps的防火墙：
-1）vi /etc/sysconfig/iptables
-2）加入-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
-3）/etc/init.d/iptables stop                 ＃关闭防火墙 #start开启 #restart重启＃status状态
-
-防火墙重启之后，访问vps地址，就能打开我们心爱的博客了
-</code></pre><p>著作权归作者所有，转载请联系作者获得授权，并标注“非色的天”。</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://www.dz119.com/2016/08/23/hello-world/</url>
+      <url>http://www.dz119.com/2016/08/27/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -159,6 +67,131 @@ chmod -R  777 www      ＃权限全开吧，无所谓，反正是静态网站。
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[60元搭建顶级域名个人博客]]></title>
+      <url>http://www.dz119.com/2016/08/27/2/</url>
+      <content type="html"><![CDATA[<h2 id="&#x8D2D;&#x7F6E;&#x9876;&#x7EA7;&#x57DF;&#x540D;"><a href="#&#x8D2D;&#x7F6E;&#x9876;&#x7EA7;&#x57DF;&#x540D;" class="headerlink" title="&#x8D2D;&#x7F6E;&#x9876;&#x7EA7;&#x57DF;&#x540D;"></a>&#x8D2D;&#x7F6E;&#x9876;&#x7EA7;&#x57DF;&#x540D;</h2><blockquote>
+<p>&#x80AF;&#x5B9A;&#x4E0D;&#x80FD;&#x5728;&#x56FD;&#x5185;&#x6CE8;&#x518C;&#x4E86;&#xFF0C;&#x89E3;&#x6790;&#x592A;&#x9EBB;&#x70E6;&#xFF08;&#x4E14;&#x968F;&#x65F6;&#x4F1A;&#x6709;&#x88AB;&#x505C;&#x6B62;&#x89E3;&#x6790;&#x7684;&#x98CE;&#x9669;&#xFF09;&#x3002;&#x3002;</p>
+</blockquote>
+<p>&#x7533;&#x8BF7;&#x514D;&#x8D39;&#x57DF;&#x540D; &#xFF0A;&#xFF0A;&#xFF0A;.ga&#x6210;&#x529F;&#xFF0C;&#x4F46;&#x662F;&#x603B;&#x89C9;&#x5F97;&#x4E0D;&#x8212;&#x670D;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x89E3;&#x6790;&#x4E3B;&#x673A;&#x7684;&#x65F6;&#x5019;&#x3002;<br>&#x6CE8;&#x518C;&#x6536;&#x8D39;&#x7684;&#x9876;&#x7EA7;&#x57DF;&#x540D;&#x670D;&#x52A1;&#x5546;&#x4ECB;&#x7ECD;:</p>
+<ul>
+<li>&#x57DF;&#x540D;&#x6CE8;&#x518C;&#x5546;namecheap&#x3002;&#x574F;&#x5904;&#xFF1A;&#x4E0D;&#x53EF;&#x4EE5;&#x7528;&#x652F;&#x4ED8;&#x5B9D;&#x4ED8;&#x6B3E;&#x3002;&#x4EF7;&#x683C;&#x8FD8;&#x7B97;&#x4FBF;&#x5B9C;&#xFF0C;&#x4ECE;cheap&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x3002;</li>
+<li>&#x57DF;&#x540D;&#x6CE8;&#x518C;&#x5546;godaddy&#x3002;&#x597D;&#x5904;&#xFF1A;&#x6700;&#x77E5;&#x540D;&#x7684;&#x57DF;&#x540D;&#x6CE8;&#x518C;&#x5546;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x652F;&#x4ED8;&#x5B9D;&#x4ED8;&#x6B3E;&#x3002;&#x574F;&#x5904;:&#x4F46;&#x4E0D;&#x80FD;&#x505A;&#x6CE8;&#x518C;&#x8D44;&#x6599;&#x9690;&#x85CF;&#xFF0C;&#x5F97;&#x53E6;&#x5916;&#x52A0;&#x94B1;&#x3002;</li>
+<li>&#x57DF;&#x540D;&#x6CE8;&#x518C;&#x5546;namesilo&#x3002;&#x597D;&#x5904;&#xFF1A;&#x77E5;&#x540D;&#x7684;&#x57DF;&#x540D;&#x6CE8;&#x518C;&#x5546;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x652F;&#x4ED8;&#x5B9D;&#x4ED8;&#x6B3E;&#x3002;&#x7279;&#x522B;&#x597D;&#x5904;&#xFF1A;&#x6CE8;&#x518C;&#x8D44;&#x6599;&#x9690;&#x85CF;&#x4E0D;&#x6536;&#x8D39;&#x3002;<blockquote>
+<p>&#x6700;&#x7EC8;&#x9009;&#x62E9;&#x4E86;namasilo&#xFF0C;&#x82B1;&#x4E86;60&#x5927;&#x6D0B;&#x3002;&#x6211;&#x7684;&#x9876;&#x7EA7;&#x57DF;&#x540D;www.dz119.com&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;whois&#x4E00;&#x4E0B;&#x6211;&#x7684;&#x7AD9;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="&#x51C6;&#x5907;vps&#x6216;&#x4E2A;&#x4EBA;"><a href="#&#x51C6;&#x5907;vps&#x6216;&#x4E2A;&#x4EBA;" class="headerlink" title="&#x51C6;&#x5907;vps&#x6216;&#x4E2A;&#x4EBA;"></a>&#x51C6;&#x5907;vps&#x6216;&#x4E2A;&#x4EBA;</h2><p>&#x4E3A;&#x4E86;&#x4E0D;&#x7528;&#x5907;&#x6848;&#xFF0C;&#x7EE7;&#x7EED;&#x9009;&#x62E9;&#x5883;&#x5916;&#x7684;&#x7A7A;&#x95F4;&#x6216;vps&#x3002;&#x3002;&#x514D;&#x8D39;&#x7A7A;&#x95F4;ping&#x503C;&#x592A;&#x9AD8;&#xFF0C;&#x6253;&#x5F00;&#x901F;&#x5EA6;&#x6162;&#x3002;<br>&#x6700;&#x7EC8;&#x9009;&#x62E9;&#x4E86;vps&#x65B9;&#x6848;&#xFF0C;&#x56E0;&#x4E3A;vps&#x987A;&#x4FBF;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E2A;vpn&#x3002;&#x3002;&#x5BF9;&#x4E8E;&#x975E;&#x6280;&#x672F;&#x63A7;&#xFF0C;&#x603B;&#x60F3;&#x7740;google&#x4E00;&#x4E0B;&#x3002;<br>vps&#x7C7B;&#x4F3C;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F46;&#x662F;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x865A;&#x62DF;&#x5316;&#x51FA;&#x6765;&#x7684;&#x3002;</p>
+<h3 id="&#x5728;&#x9009;&#x62E9;vps&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x503E;&#x5411;&#x4E8E;&#x9999;&#x6E2F;&#x6216;&#x97E9;&#x56FD;&#x7684;vps&#x3002;&#x56E0;&#x4E3A;ping&#x503C;&#x8F83;&#x4F4E;&#xFF0C;&#x548C;&#x5728;&#x56FD;&#x5185;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5DEE;&#x522B;&#x4E0D;&#x5927;&#x3002;"><a href="#&#x5728;&#x9009;&#x62E9;vps&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x503E;&#x5411;&#x4E8E;&#x9999;&#x6E2F;&#x6216;&#x97E9;&#x56FD;&#x7684;vps&#x3002;&#x56E0;&#x4E3A;ping&#x503C;&#x8F83;&#x4F4E;&#xFF0C;&#x548C;&#x5728;&#x56FD;&#x5185;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5DEE;&#x522B;&#x4E0D;&#x5927;&#x3002;" class="headerlink" title="&#x5728;&#x9009;&#x62E9;vps&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x503E;&#x5411;&#x4E8E;&#x9999;&#x6E2F;&#x6216;&#x97E9;&#x56FD;&#x7684;vps&#x3002;&#x56E0;&#x4E3A;ping&#x503C;&#x8F83;&#x4F4E;&#xFF0C;&#x548C;&#x5728;&#x56FD;&#x5185;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5DEE;&#x522B;&#x4E0D;&#x5927;&#x3002;"></a>&#x5728;&#x9009;&#x62E9;vps&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x503E;&#x5411;&#x4E8E;&#x9999;&#x6E2F;&#x6216;&#x97E9;&#x56FD;&#x7684;vps&#x3002;&#x56E0;&#x4E3A;ping&#x503C;&#x8F83;&#x4F4E;&#xFF0C;&#x548C;&#x5728;&#x56FD;&#x5185;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5DEE;&#x522B;&#x4E0D;&#x5927;&#x3002;</h3><p>&#x6700;&#x7EC8;&#x9009;&#x62E9;&#x4E86;&#x670B;&#x53CB;&#x4EE5;&#x524D;&#x9001;&#x7684;&#x514D;&#x8D39;vps&#xFF0C;ping&#x503C;&#x5728;40-60ms&#x5DE6;&#x53F3;&#x3002; &#x5F88;&#x60F3;&#x8D2D;&#x7F6E;<strong>&#x9999;&#x6E2F;&#x6C99;&#x7530;&#x7684;&#x7535;&#x4FE1;cn2&#x670D;&#x52A1;&#x5668;</strong>&#xFF0C;&#x975E;&#x5E38;&#x7A33;&#x5B9A;&#xFF0C;&#x4F46;&#x4E00;&#x4E2A;&#x6708;&#x8981;&#x63A5;&#x8FD1;50&#x5143;&#xFF0C;&#x4EE5;&#x540E;&#x62C9;&#x5230;&#x8D5E;&#x52A9;&#x518D;&#x8BF4;&#x3002;</p>
+<h2 id="&#x51C6;&#x5907;&#x6846;&#x67B6;&#x6A21;&#x7248;"><a href="#&#x51C6;&#x5907;&#x6846;&#x67B6;&#x6A21;&#x7248;" class="headerlink" title="&#x51C6;&#x5907;&#x6846;&#x67B6;&#x6A21;&#x7248;"></a>&#x51C6;&#x5907;&#x6846;&#x67B6;&#x6A21;&#x7248;</h2><p>hexo&#x662F;&#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;&#x3002;&#x7ECF;&#x5E38;&#x66F4;&#x65B0;&#x3002;&#x6B63;&#x5728;&#x7F16;&#x8F91;&#x7684;&#x65F6;&#x5019;&#xFF0C;4.6&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x51FA;&#x6765;&#x4E86;&#x3002;&#x4E3B;&#x9898;&#x5C31;&#x5982;&#x4F60;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x8FD9;&#x6837;&#xFF0C;&#x6211;&#x9009;&#x62E9;&#x4E86;simple&#x7684;&#x7B80;&#x4ECB;&#x7248;&#x672C;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x8212;&#x670D;&#x3002;</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[利用hexo创建个人博客]]></title>
+      <url>http://www.dz119.com/2016/08/23/1/</url>
+      <content type="html"><![CDATA[<h2 id="&#x524D;&#x671F;&#x51C6;&#x5907;"><a href="#&#x524D;&#x671F;&#x51C6;&#x5907;" class="headerlink" title="&#x524D;&#x671F;&#x51C6;&#x5907;"></a>&#x524D;&#x671F;&#x51C6;&#x5907;</h2><ol>
+<li>&#x73AF;&#x5883;&#xFF1A;macbook&#xFF0C;vps&#xFF08;&#x7EAF;&#x51C0;centos 6.2&#xFF09;</li>
+<li><p>&#x535A;&#x5BA2;&#x7248;&#x672C;&#xFF1A;hexo</p>
+<pre><code>&gt; &#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9; Hexo &#x5462;&#xFF1F;
+
+- &#x559C;&#x6B22;Hexo&#x7684;&#x4E3B;&#x9898;&#xFF0C;&#x4E0D;&#x5C11;&#x90FD;&#x9002;&#x5408;&#x4E2D;&#x6587;
+- &#x914D;&#x7F6E;&#x7B80;&#x5355;&#xFF0C;&#x4E00;&#x952E;&#x53D1;&#x5E03;
+- &#x521B;&#x4F5C;&#x8005;&#x662F;&#x53F0;&#x6E7E;&#x4EBA;&#xFF0C;&#x652F;&#x6301;&#x4E00;&#x4E0B;&#x56FD;&#x4EBA;&#x7684;&#x5F00;&#x53D1;&#x6210;&#x679C;&#xFF01;
+- &#x5B89;&#x5168;&#x3002;&#x3002;hexo&#x81EA;&#x52A8;&#x5C06;&#x7F51;&#x9875;&#x8F6C;&#x6362;&#x6210;&#x9759;&#x6001;html&#xFF0C;&#x4E0D;&#x9700;&#x8981;php&#x6216;mysql&#xFF0C;vps&#x7CFB;&#x7EDF;&#x5360;&#x7528;&#x8D44;&#x6E90;&#x5C11;&#x3002;
+- &#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x5C31;&#x53EF;&#x4EE5;&#x641E;&#x5B9A;. &#x201C;hexo d&#x201D;&#x5C31;&#x80FD;&#x5C06;&#x672C;&#x5730;&#x5199;&#x597D;&#x7684;&#x6587;&#x7AE0;&#x8FDB;&#x884C;&#x4E0A;&#x4F20;&#xFF0C;&#x65E0;&#x9700;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x3002;
+</code></pre><a id="more"></a></li>
+<li>GitHub<br>&#x5728;&#x4E00;&#x4E2A;&#x670B;&#x53CB;&#x7684;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4E0B;&#xFF0C;&#x5F03;&#x7528;wordpress&#x3002;<br> &#x53C2;&#x9605;&#x4E86;&#x5F88;&#x591A;&#x6587;&#x7AE0;&#x4E4B;&#x540E;&#xFF0C;&#x9009;&#x62E9;&#x4E86;hexo+GitHub+vps&#x7684;&#x6A21;&#x5F0F;<br>&#x5728;&#x672C;&#x5730;&#x642D;&#x5EFA;&#x597D;hexo&#x4E4B;&#x540E;&#xFF0C;&#x5C06;hexo&#x751F;&#x6210;&#x7684;html&#x9759;&#x6001;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x81F3;github&#xFF08;https:su89.github.io&#xFF09;&#x548C;vps(210.245.210.223)&#x4E0A;&#x3002;<blockquote>
+<p>&#x6CA1;&#x6709;vps&#x7684;&#x670B;&#x53CB;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x770B;&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x53EF;&#x4EE5;&#x514D;&#x8D39;&#x642D;&#x5EFA;&#x7C7B;&#x4F3C;https:su89.github.io&#x7684;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x3002;</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="&#x672C;&#x5730;&#x642D;&#x5EFA;hexo"><a href="#&#x672C;&#x5730;&#x642D;&#x5EFA;hexo" class="headerlink" title="&#x672C;&#x5730;&#x642D;&#x5EFA;hexo"></a>&#x672C;&#x5730;&#x642D;&#x5EFA;hexo</h2><ol>
+<li>&#x73AF;&#x5883;&#x642D;&#x5EFA;<br> &#x5B89;&#x88C5;git &#xFF08;&#x56E0;&#x4E3A;&#x8981;&#x7ED9;github&#x4E0A;&#x4F20;&#x6587;&#x7AE0;&#xFF09;    #brew install git<br> &#x5B89;&#x88C5;Node.js&#xFF08;&#x56E0;&#x4E3A;Hexo&#x662F;&#x57FA;&#x4E8E;Node.js&#x5F00;&#x53D1;&#x7684;&#xFF09;</li>
+<li>&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;Hexo<br>  &#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x76F4;&#x63A5;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x5230;&#x7535;&#x8111;&#x7EC8;&#x70B9;&#x8FD0;&#x884C;&#x7684;,&#x4E0A;&#x9762;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x4EE5;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;npm&#x5B89;&#x88C5;Hexo&#x4E86;<br>  <code>npm install -g hexo-cli</code><br>  &#x7136;&#x540E;&#x5728;&#x672C;&#x5730;&#x76EE;&#x5F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;,&#x6BD4;&#x5982;&#x6211;&#x521B;&#x5EFA;&#x7684;&#x662F;&#x4E00;&#x4E2A;Hexo&#x6587;&#x4EF6;&#x5939;<br>  &#x7136;&#x540E;cd&#x5230;Hexo&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8FDB;&#x53BB;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;<br>  &#x7136;&#x540E;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;<br>  <code>hexo init
+  npm install</code><br>  &#x5982;&#x679C;&#x51FA;&#x73B0;&#x5F88;&#x591A;&#x4E32;&#x4EE3;&#x7801;&#x7684;&#x8BDD;&#xFF0C;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x660E;&#x663E;&#x7684;&#x9519;&#x8BEF;&#x5C31;&#x8868;&#x793A;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x3002;<br>  &#x7136;&#x540E;&#x542F;&#x52A8;&#x672C;&#x5730;&#x8FD9;&#x4E2A;Hexo&#x670D;&#x52A1;<br>  <code>hexo server</code><br>  &#x7136;&#x540E;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x8F93;&#x5165;<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> &#x6709;&#x5185;&#x5BB9;&#x8BC1;&#x660E;Hexo&#x5B89;&#x88C5;&#x6210;&#x529F;</li>
+<li>&#x914D;&#x7F6E;github&#x4ED3;&#x5E93;<br>  github&#x5B98;&#x7F51;(<a href="http://www.github.com" target="_blank" rel="external">http://www.github.com</a>)<br>  &#x6CE8;&#x518C;&#x8D26;&#x53F7;&#x6211;&#x5C31;&#x4E0D;&#x7528;&#x8BF4;&#x4E86;&#x5427;&#xFF0C;&#x90FD;&#x5F88;&#x7B80;&#x5355;,&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7684;&#x653E;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x7684;&#x4ED3;&#x5E93;&#xFF0C;&#x70B9;&#x51FB;Crete a repositor&#x3002;<br>  &#x521B;&#x5EFA;&#x7684;repositor&#x7528;&#x6237;&#x540D;.github.io&#xFF08;&#x4F8B;&#x5982;:su89.github.com&#xFF09;&#x5FC5;&#x987B;&#x662F;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#xFF0C;&#x4E0D;&#x80FD;&#x6709;&#x4E00;&#x70B9;&#x504F;&#x5DEE;&#x3002;&#x5C31;&#x6309;&#x7167;&#x6211;&#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x5C31;&#x884C;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x628A;&#x7528;&#x6237;&#x540D;&#x6539;&#x4E3A;&#x4F60;&#x7684;.&#x7136;&#x540E;&#x70B9;&#x51FB;&#x521B;&#x5EFA;&#xFF0C;&#x4F1A;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x4ED3;&#x5E93;.</li>
+<li>&#x914D;&#x7F6E;<br>  &#x56E0;&#x4E3A;&#x6211;&#x7684;macbook&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;github desktop&#x3002;SSH&#x914D;&#x7F6E;&#x597D;&#x4E86;&#xFF0C;&#x4E0B;&#x9762;&#x914D;&#x7F6E;&#x672C;&#x5730;Hexo<pre><code>&#x6253;&#x5F00;Hexo&#x76EE;&#x5F55;&#x4E0B;&#x7684;_config.yml&#xFF0C;&#x62C9;&#x5012;&#x6700;&#x4E0B;&#x9762;
+`deploy:
+      type: git
+      repository: https://github.com/codertian/codertian.github.io.git
+      branch: master
+&#x4FDD;&#x5B58;&#xFF0C;cd&#x5230;Hexo&#x7684;&#x6839;&#x76EE;&#x5F55;
+&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;
+hexo clean
+hexo g
+hexo d`
+</code></pre>&#x5230;&#x8FD9;&#x4E00;&#x6B65;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x62E5;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#xFF08;&#x7F51;&#x5740;&#x4E3A;https:&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;.github.io&#xFF09;&#x3002;<br>&#x4E0B;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x9002;&#x7528;&#x4E8E;&#x62E5;&#x6709;&#x4E2A;&#x4EBA;vps&#x7684;&#x4EBA;&#xFF0C;&#x628A;&#x7F51;&#x7AD9;&#x642D;&#x5EFA;&#x5230;&#x81EA;&#x5DF1;&#x7684;vps&#x4E0A;&#x3002;</li>
+</ol>
+<h2 id="vps&#x4E0A;&#x642D;&#x5EFA;nginx"><a href="#vps&#x4E0A;&#x642D;&#x5EFA;nginx" class="headerlink" title="vps&#x4E0A;&#x642D;&#x5EFA;nginx"></a>vps&#x4E0A;&#x642D;&#x5EFA;nginx</h2><ol>
+<li>ssh root@210.245.210.222<br>  ssh&#x8FDE;&#x63A5;vps&#xFF0C;&#x51FA;&#x73B0;&#x201C;REMOTE HOST IDENTIFICATION HAS CHANGED&#x201D;&#x9519;&#x8BEF;&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x7684;vps&#x88AB;&#x91CD;&#x88C5;&#x4E86;&#xFF0C;rsa key&#x88AB;&#x66F4;&#x6539;&#x4E86;&#xFF01;<br>  &#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;vi ~/.ssh/known_hosts<pre><code>&#x5220;&#x9664;210.245.210.222&#x7684;&#x76F8;&#x5173;rsa&#x7684;&#x4FE1;&#x606F;&#x5373;&#x53EF;.
+</code></pre></li>
+<li>&#x914D;&#x7F6E;&#x786C;&#x76D8;<br>  `yum list installed |grep &#x201C;httpd&#x201D;    &#xFF03;mysql,vnc,nginx&#x7B49;&#x7B49;<br>  netstat -ano                        &#xFF03;&#x5148;&#x770B;&#x770B;&#x6709;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;<br>  fdisk -l                            &#xFF03;&#x53D1;&#x73B0;/dev/sdb1&#x672A;&#x88AB;&#x6302;&#x8F7D;<br>  mkdir /data                         &#xFF03;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA;data&#x6587;&#x4EF6;&#x5939;<br>  mount /dev/sdb1 /data               &#xFF03;&#x5C06;/dev/sdb1&#x6302;&#x8F7D;<br>  df -Th                              &#xFF03;&#x67E5;&#x770B;/dev/sdb1&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E3A;ext4<br>  vi /etc/fstab                       #&#x5728;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;/dev/sdb1 /data  ext4  defaults  0 0&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x542F;&#x52A8;``</li>
+<li><p>&#x5B89;&#x88C5;nginx<br>  <code>wget http://nginx.org/download/nginx-1.11.3.tar.gz   &#x4E0B;&#x8F7D;tar.gz&#x5B89;&#x88C5;&#x5305;&#x5931;&#x8D25;&#xFF0C;&#x56E0;&#x4E3A;&#x57DF;&#x540D;&#x6CA1;&#x6709;&#x89E3;&#x6790;
+  vi /etc/sysconfig/network-scripts/ifcfg-eth0 &#xFF03;&#x6216;vi /etc/resolv.conf  &#x4FEE;&#x6539;dns&#x670D;&#x52A1;&#x5668;&#x4E3A;8.8.8.8&#x6216;8.8.4.4</code></p>
+<pre><code>&#x518D;&#x6B21;&#x4E0B;&#x8F7D;&#x6210;&#x529F;&#xFF0C;&#x6B63;&#x5F0F;&#x5F00;&#x59CB;&#x5B89;&#x88C5; Nginx&#xFF1A;
+
+* &#x521B;&#x5EFA;Nginx&#x4E13;&#x7528;&#x7528;&#x6237;&#x4E0E;&#x7528;&#x6237;&#x7EC4;
+`[root@widlabs ~]# groupadd www                 &#x6DFB;&#x52A0;&#x7EC4;www
+[root@widlabs ~]# useradd -s /sbin/nologin -M -g www nginx`
+* &#x5B89;&#x88C5;Nginx&#x6240;&#x9700;&#x4F9D;&#x8D56;
+`[root@widlabs ~]# yum install pcre-devel
+[root@widlabs ~]# yum install zlib-devel`
+* &#x8FDB;&#x884C;nginx&#x7F16;&#x8BD1;&#x5B89;&#x88C5;
+``[root@widlabs ~]# cd /home/upload        #&#x8FDB;&#x5165;nginx&#x6E90;&#x7801;&#x5305;&#x6240;&#x5728;&#x76EE;&#x5F55;
+[root@widlabs upload]# tar tar zxvf nginx-1.6.0.tar.gz
+[root@widlabs upload]# cd nginx-1.6.0
+[root@widlabs nginx-1.6.0]# ./configure --prefix=/usr/local/nginx --user=nginx --group=www --with-pcre
+[root@widlabs nginx-1.6.0]# make
+[root@widlabs nginx-1.6.0]# make install
+
+&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF01;&#xFF01;&#xFF01;
+mkdir /data/www        #&#x521B;&#x5EFA;&#x7F51;&#x9875;&#x5B58;&#x653E;&#x76EE;&#x5F55;
+chmod -R nginx.www www #&#x5C06;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x4E3A;www&#x7528;&#x6237;&#x7EC4;&#x4E2D;nginx&#x7528;&#x6237;&#x63A7;&#x5236;&#x6743;&#x9650;
+chmod -R  777 www      &#xFF03;&#x6743;&#x9650;&#x5168;&#x5F00;&#x5427;&#xFF0C;&#x65E0;&#x6240;&#x8C13;&#xFF0C;&#x53CD;&#x6B63;&#x662F;&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x3002;``
+</code></pre></li>
+</ol>
+<h2 id="deploy&#x914D;&#x7F6E;"><a href="#deploy&#x914D;&#x7F6E;" class="headerlink" title="deploy&#x914D;&#x7F6E;"></a>deploy&#x914D;&#x7F6E;</h2><ol>
+<li>&#x5728; Hexo &#x76EE;&#x5F55;&#x4E0B;&#x5B89;&#x88C5; rsync</li>
+<li>&#x672C;&#x5730;macbook&#x4E0A;&#x8FD0;&#x884C;&#xFF1A;$ npm install hexo-deployer-rsync &#x2013;save</li>
+<li><p>&#x6839;&#x636E;&#x5728; Hexo &#x4E2D;&#x7684; _config.yml &#x4E2D;&#x6DFB;&#x52A0; Deploy &#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x6211;&#x5728;&#x81EA;&#x5DF1;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x4EE3;&#x7801;&#xFF0C;&#x5411;github&#x548C;vps&#x540C;&#x65F6;&#x4E0A;&#x4F20;hexo&#x4E2D;public&#x6587;&#x4EF6;<br>   deploy:</p>
+<ul>
+<li>type: git<br>repository: git@github.com:su89/su89.github.io.git<br>branch: master</li>
+<li><p>type: rsync<br>host: &#x4F60; VPS &#x7684; IP &#x5730;&#x5740;&#x6216;&#x8005;&#x57DF;&#x540D;<br>user: root<br>root: &#x4F60;&#x60F3;&#x5C06; Hexo &#x751F;&#x6210;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x5728; VPS &#x4E2D;&#x7684;&#x76EE;&#x5F55; &#x4F8B;&#x5982;: /www/hexo/blog/<br>port: &#x4F60; VPS &#x7684; ssh &#x7AEF;&#x53E3;&#x53F7;<br>delete: true<br>verbose: true<br>ignore_errors: false<br>*&#x5FC5;&#x987B;&#x5148;&#x5728; VPS &#x4E0A;&#x521B;&#x5EFA;&#x597D;&#x4E86;&#x60F3;&#x8981;&#x5B58;&#x653E; Hexo &#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#xFF0C; rsync &#x4E0D;&#x80FD;&#x521B;&#x5EFA;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x76EE;&#x5F55;</p>
+<p>&#x6211;&#x770B;&#x7F51;&#x4E0A;&#x6709;&#x7684;&#x670B;&#x53CB;&#x8BF4;&#x5149;&#x5728; Hexo &#x4E2D;&#x4F7F;&#x7528; rsync &#x4E0D;&#x591F;&#xFF0C;&#x5728; VPS &#x4E5F;&#x9700;&#x8981;&#x4E0B;&#x8F7D; rsync &#x670D;&#x52A1;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x5728;&#x642C;&#x74E6;&#x5DE5;(&#x53C8;&#x6253;&#x4E86;&#x4E00;&#x6B21;&#x5E7F;&#x544A;&#xFF0C;&#x642C;&#x74E6;&#x5DE5;&#x662F;&#x4E0D;&#x662F;&#x5E94;&#x8BE5;&#x7ED9;&#x6211;&#x4ED8;&#x70B9;&#x5C0F;&#x8D39;&#x554A;)&#x4E0A;&#x5C31;&#x6CA1;&#x6709;&#x4E0B;&#x8F7D; rsync &#x670D;&#x52A1;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728; Hexo &#x4E2D;&#x7528; rsync &#x90E8;&#x7F72;&#x7684;&#x65F6;&#x5019;&#x4E00;&#x76F4;&#x62A5;&#x9519;&#xFF0C;&#x90A3;&#x5C31;&#x5728; VPS &#x4E0A;&#x4E0B;&#x8F7D; rsync &#x670D;&#x52A1;&#xFF0C;&#x770B;&#x80FD;&#x5426;&#x89E3;&#x51B3;&#x4E00;&#x76F4;&#x51FA;&#x9519;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;<br>$ yum -y install rsync</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x914D;&#x7F6E;-Nginx"><a href="#&#x914D;&#x7F6E;-Nginx" class="headerlink" title="&#x914D;&#x7F6E; Nginx"></a>&#x914D;&#x7F6E; Nginx</h2><pre><code>Hexo &#x6210;&#x529F;&#x90E8;&#x7F72;&#x5230; VPS &#x4E0A;&#x4E4B;&#x540E;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x662F;&#x5728;vps&#x4E0A;&#x6765;&#x914D;&#x7F6E; Nginx &#x4E86;
+``[root@widlabs ~]# cd /usr/local/nginx/conf
+[root@widlabs conf]# cp nginx.conf nginx.conf.bak
+[root@widlabs conf]# vi nginx.conf
+    &#x4FEE;&#x6539;nginx.conf&#x6587;&#x4EF6;&#xFF1A;
+    server {
+        listen       80;
+        server_name  widlabs.com www.widlabs.com;            #&#x7F51;&#x7AD9;&#x57DF;&#x540D;
+        location / {
+            root   /data/www;                      #&#x4F60;&#x5B58;&#x653E;hexo&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;
+            index  index.html index.htm index.php;        #&#x6DFB;&#x52A0; index.php
+        }
+
+[root@widlabs html]# /usr/local/nginx/sbin/nginx                        #&#x542F;&#x52A8;Nginx
+[root@widlabs html]# /usr/local/nginx/sbin/nginx -s stop                #&#x505C;&#x6B62;Nginx
+[root@widlabs html]# /usr/local/nginx/sbin/nginx -s reload              #&#x91CD;&#x542F;Nginx``
+&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;&#x4E4B;&#x540E;&#x7F51;&#x7AD9;&#x5C31;&#x5E94;&#x8BE5;&#x8FD8;&#x4E0D;&#x80FD;&#x901A;&#x8FC7; VPS &#x7684; IP &#x5730;&#x65B9;&#x8BBF;&#x95EE;&#x5230;&#x3002;&#x56E0;&#x4E3A;80&#x7AEF;&#x53E3;&#x4E0D;&#x80FD;&#x88AB;&#x8BBF;&#x95EE;&#x3002;
+&#x9700;&#x8981;&#x7EE7;&#x7EED;&#x914D;&#x7F6E;vps&#x7684;&#x9632;&#x706B;&#x5899;&#xFF1A;
+1&#xFF09;vi /etc/sysconfig/iptables
+2&#xFF09;&#x52A0;&#x5165;-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+3&#xFF09;/etc/init.d/iptables stop                 &#xFF03;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899; #start&#x5F00;&#x542F; #restart&#x91CD;&#x542F;&#xFF03;status&#x72B6;&#x6001;
+
+&#x9632;&#x706B;&#x5899;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#xFF0C;&#x8BBF;&#x95EE;vps&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x80FD;&#x6253;&#x5F00;&#x6211;&#x4EEC;&#x5FC3;&#x7231;&#x7684;&#x535A;&#x5BA2;&#x4E86;
+</code></pre><p>&#x8457;&#x4F5C;&#x6743;&#x5F52;&#x4F5C;&#x8005;&#x6240;&#x6709;&#xFF0C;&#x8F6C;&#x8F7D;&#x8BF7;&#x8054;&#x7CFB;&#x4F5C;&#x8005;&#x83B7;&#x5F97;&#x6388;&#x6743;&#xFF0C;&#x5E76;&#x6807;&#x6CE8;&#x201C;&#x975E;&#x8272;&#x7684;&#x5929;&#x201D;&#x3002;</p>
 ]]></content>
     </entry>
     
