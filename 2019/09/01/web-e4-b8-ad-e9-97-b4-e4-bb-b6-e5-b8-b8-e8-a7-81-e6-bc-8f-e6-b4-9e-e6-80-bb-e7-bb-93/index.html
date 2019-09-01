@@ -1,0 +1,965 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="0x00 &amp;#x80CC;&amp;#x666F; &amp;#x7B14;&amp;#x8BB0;&amp;#x5728;kali linux(32bit)&amp;#x73AF;&amp;#x5883;&amp;#x4E0B;&amp;#x5B8C;&amp;#x6210;&amp;#xFF0C;&amp;#x6DB5;&amp;#x76D6;&amp;#x4E86;&amp;#x7B14;&amp;#x8005;&amp;#x5BF9;&amp;#x4E8E;metasploit &amp;#x6846;&amp;#x67B6;&amp;#x768">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web中间件常见漏洞总结">
+<meta property="og:url" content="http://www.dz119.com/2019/09/01/web-e4-b8-ad-e9-97-b4-e4-bb-b6-e5-b8-b8-e8-a7-81-e6-bc-8f-e6-b4-9e-e6-80-bb-e7-bb-93/index.html">
+<meta property="og:site_name" content="非色的天">
+<meta property="og:description" content="0x00 &amp;#x80CC;&amp;#x666F; &amp;#x7B14;&amp;#x8BB0;&amp;#x5728;kali linux(32bit)&amp;#x73AF;&amp;#x5883;&amp;#x4E0B;&amp;#x5B8C;&amp;#x6210;&amp;#xFF0C;&amp;#x6DB5;&amp;#x76D6;&amp;#x4E86;&amp;#x7B14;&amp;#x8005;&amp;#x5BF9;&amp;#x4E8E;metasploit &amp;#x6846;&amp;#x67B6;&amp;#x768">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.dz110.xyz/wp-content/uploads/2019/09/19062913568b2bd764a5811604.png">
+<meta property="og:image" content="http://www.dz110.xyz/wp-content/uploads/2019/09/1906291356f4647b4f5313a71c.png">
+<meta property="og:updated_time" content="2019-09-01T15:41:01.889Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web中间件常见漏洞总结">
+<meta name="twitter:description" content="0x00 &amp;#x80CC;&amp;#x666F; &amp;#x7B14;&amp;#x8BB0;&amp;#x5728;kali linux(32bit)&amp;#x73AF;&amp;#x5883;&amp;#x4E0B;&amp;#x5B8C;&amp;#x6210;&amp;#xFF0C;&amp;#x6DB5;&amp;#x76D6;&amp;#x4E86;&amp;#x7B14;&amp;#x8005;&amp;#x5BF9;&amp;#x4E8E;metasploit &amp;#x6846;&amp;#x67B6;&amp;#x768">
+<meta name="twitter:image" content="http://www.dz110.xyz/wp-content/uploads/2019/09/19062913568b2bd764a5811604.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '非色的天'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.dz119.com/2019/09/01/web-e4-b8-ad-e9-97-b4-e4-bb-b6-e5-b8-b8-e8-a7-81-e6-bc-8f-e6-b4-9e-e6-80-bb-e7-bb-93/">
+
+  <title> Web中间件常见漏洞总结 | 非色的天 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f3dfe665e542c74a70fff22cf1e645fc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">非色的天</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">非技术控。努力往前跑</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Web中间件常见漏洞总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2019-09-01T20:34:22+08:00" content="2019-09-01">
+              2019-09-01
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2019/09/01/web-e4-b8-ad-e9-97-b4-e4-bb-b6-e5-b8-b8-e8-a7-81-e6-bc-8f-e6-b4-9e-e6-80-bb-e7-bb-93/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/09/01/web-e4-b8-ad-e9-97-b4-e4-bb-b6-e5-b8-b8-e8-a7-81-e6-bc-8f-e6-b4-9e-e6-80-bb-e7-bb-93/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2019/09/01/web-e4-b8-ad-e9-97-b4-e4-bb-b6-e5-b8-b8-e8-a7-81-e6-bc-8f-e6-b4-9e-e6-80-bb-e7-bb-93/" class="leancloud_visitors" data-flag-title="Web中间件常见漏洞总结">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="0x00-&#x80CC;&#x666F;"><a href="#0x00-&#x80CC;&#x666F;" class="headerlink" title="0x00 &#x80CC;&#x666F;"></a>0x00 &#x80CC;&#x666F;</h2><hr>
+<p>&#x7B14;&#x8BB0;&#x5728;kali linux(32bit)&#x73AF;&#x5883;&#x4E0B;&#x5B8C;&#x6210;&#xFF0C;&#x6DB5;&#x76D6;&#x4E86;&#x7B14;&#x8005;&#x5BF9;&#x4E8E;metasploit &#x6846;&#x67B6;&#x7684;&#x8BA4;&#x8BC6;&#x3001;&#x7406;&#x89E3;&#x3001;&#x5B66;&#x4E60;&#x3002;</p>
+<p>&#x8FD9;&#x7BC7;&#x4E3A;&#x57FA;&#x7840;&#x7BC7;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x592A;&#x591A;&#x6280;&#x5DE7;&#x6027;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x4F46;&#x8FD8;&#x662F;&#x8BF7;&#x5927;&#x5BB6;&#x8BA4;&#x771F;&#x770B;&#x5566;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x9605;&#x8BFB;&#x4E2D;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#x90FD;&#x53EF;&#x4EE5;&#x4E0E;&#x6211;&#x90AE;&#x4EF6;&#x8054;&#x7CFB;&#xFF08;<a href="mailto:contact@x0day.me" target="_blank" rel="noopener">contact@x0day.me</a>&#xFF09;</p>
+<h2 id="0x01-&#x5728;kali&#x4E2D;&#x4F7F;&#x7528;metasploit"><a href="#0x01-&#x5728;kali&#x4E2D;&#x4F7F;&#x7528;metasploit" class="headerlink" title="0x01 &#x5728;kali&#x4E2D;&#x4F7F;&#x7528;metasploit"></a>0x01 &#x5728;kali&#x4E2D;&#x4F7F;&#x7528;metasploit</h2><hr>
+<p>&#x5728;kali&#x4E2D;&#x4F7F;&#x7528;metasploit&#xFF0C;&#x9700;&#x8981;&#x5148;&#x5F00;&#x542F;PostgreSQL&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x548C;metasploit&#x670D;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6574;&#x7684;&#x5229;&#x7528;msf&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;exploit&#x548C;&#x8BB0;&#x5F55;&#x4E86;&#x3002;&#x8FD9;&#x4E00;&#x70B9;&#x6BD4;bt5&#x8981;&#x65B9;&#x4FBF;&#x5F88;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x73B0;&#x5728;&#x5C31;&#x653E;&#x5F03;&#x4E86;bt5&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x547D;&#x4EE4;&#x4E0E;&#x622A;&#x56FE;</p>
+<p>service postgresql start<br>service metasploit start</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x6BCF;&#x6B21;&#x5F00;&#x673A;&#x90FD;&#x8FD9;&#x6837;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x968F;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x3002;</p>
+<p>update-rc.d postgresql enable<br>update-rc.d metasploit enable</p>
+<h2 id="0x02-metasploit&#x76EE;&#x5F55;&#x7ED3;&#x6784;"><a href="#0x02-metasploit&#x76EE;&#x5F55;&#x7ED3;&#x6784;" class="headerlink" title="0x02 metasploit&#x76EE;&#x5F55;&#x7ED3;&#x6784;"></a>0x02 metasploit&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h2><hr>
+<p>&#x4E4B;&#x6240;&#x4EE5;&#x4F1A;&#x8BB2;&#x5230;&#x8FD9;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x8BA4;&#x4E3A;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x662F;&#x7528;&#x6765;&#x5B66;&#x4E60;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x597D;&#x7684;&#x6765;&#x6E90;&#x3002;&#x5E76;&#x4E14;metasploit&#x662F;&#x7528;ruby&#x811A;&#x672C;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#xFF0C;&#x6240;&#x4EE5;&#x9605;&#x8BFB;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x5728;&#x6E17;&#x900F;&#xFF0C;exploit&#x7F16;&#x5199;&#x8FC7;&#x7A0B;&#x524D;&#x7406;&#x89E3;&#x6846;&#x67B6;&#x7684;&#x4F18;&#x52BF;&#x4EE5;&#x53CA;&#x5927;&#x81F4;&#x5185;&#x5BB9;&#x5219;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x6784;&#x5EFA;&#x51FA;&#x81EA;&#x5DF1;&#x7684;&#x5DE5;&#x5177;&#x6216;&#x8005;&#x627E;&#x5230;&#x5DF2;&#x77E5;&#x53EF;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x8FD9;&#x6837;&#x4E0D;&#x4EC5;&#x6709;&#x5229;&#x4E8E;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#xFF0C;&#x4E5F;&#x63D0;&#x9AD8;&#x4E86;&#x6548;&#x7387;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x53EA;&#x4ECB;&#x7ECD;&#x51E0;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x4E5F;&#x5E0C;&#x671B;&#x8BFB;&#x8005;&#x80FD;&#x628A;modules&#x4E0B;auxiliary&#x7684;&#x6A21;&#x5757;&#x5927;&#x81F4;&#x90FD;&#x770B;&#x4E00;&#x904D;&#x3002;&#x8FD9;&#x6837;&#x6709;&#x4E2A;&#x5370;&#x8C61;&#x4E5F;&#x4FBF;&#x4E8E;&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5DE5;&#x5177;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x6CA1;&#x6709;&#x4F1A;&#x4E0D;&#x4F1A;&#x7684;&#x3002;&#x53EA;&#x662F;&#x6709;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x800C;&#x5DF2;&#x3002;&#x76EE;&#x5F55;&#x5927;&#x6982;&#x770B;&#x4E00;&#x904D;&#xFF0C;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5C31;&#x5DEE;&#x4E0D;&#x591A;&#x4E86;&#x5427;&#xFF01;</p>
+<p>Kali&#x4E2D;msf&#x7684;&#x8DEF;&#x5F84;&#x4E3A;<code>/usr/share/metasploit-framework</code></p>
+<h3 id="modules"><a href="#modules" class="headerlink" title="modules"></a>modules</h3><p>&#x9996;&#x5148;&#x770B;modules&#x76EE;&#x5F55;:</p>
+<p>&#x8FD9;&#x91CC;</p>
+<p>Auxiliary&#xFF1A;&#x8F85;&#x52A9;&#x6A21;&#x5757;&#xFF0C;<br>encoders&#xFF1A;&#x4F9B;msfencode&#x7F16;&#x7801;&#x5DE5;&#x5177;&#x4F7F;&#x7528;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; msfencode &#x2013;l<br>exploits&#xFF1A;&#x653B;&#x51FB;&#x6A21;&#x5757; &#x6BCF;&#x4E2A;&#x4ECB;&#x7ECD;msf&#x7684;&#x6587;&#x7AE0;&#x90FD;&#x4F1A;&#x63D0;&#x5230;&#x90A3;&#x4E2A;ms08_067_netapi&#xFF0C;&#x5B83;&#x5C31;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x3002;<br>nops&#xFF1A;NOP (No Operation or Next Operation) sled,&#x7531;&#x4E8E;IDS/IPS&#x4F1A;&#x68C0;&#x67E5;&#x6570;&#x636E;&#x5305;&#x4E2D;&#x4E0D;&#x89C4;&#x5219;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x5408;&#x4E0B;(&#x6BD4;&#x5982;&#x9488;&#x5BF9;&#x6EA2;&#x51FA;&#x653B;&#x51FB;),&#x67D0;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x6ED1;&#x884C;&#x5B57;&#x7B26;&#x4E32;(NOPS x90x90&#x2026;)&#x5219;&#x4F1A;&#x56E0;&#x4E3A;&#x88AB;&#x62E6;&#x622A;&#x800C;&#x5BFC;&#x81F4;&#x653B;&#x51FB;&#x5931;&#x6548;&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x4FEE;&#x6539;exploit&#x4E2D;&#x7684;NOPs.nops&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x4E1C;&#x897F;&#x4F1A;&#x5728;payload&#x751F;&#x6210;&#x65F6;&#x7528;&#x5230;(&#x540E;&#x9762;&#x4F1A;&#x6709;&#x4ECB;&#x7ECD;)&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6253;&#x5F00;php&#x7684;NOPS&#x751F;&#x6210;&#x811A;&#x672C;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x53EA;&#x662F;&#x8FD4;&#x56DE;&#x4E86;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x7A7A;&#x683C;&#x800C;&#x5DF2;&#x3002;</p>
+<p>payloads&#xFF1A;&#x8FD9;&#x91CC;&#x9762;&#x5217;&#x51FA;&#x7684;&#x662F;&#x653B;&#x51FB;&#x8F7D;&#x8377;,&#x4E5F;&#x5C31;&#x662F;&#x653B;&#x51FB;&#x6210;&#x529F;&#x540E;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x5E38;&#x8BBE;&#x7F6E;&#x7684;windows/meterpreter/reverse_tcp&#x5C31;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x3002;<br>Post&#xFF1A;&#x540E;&#x6E17;&#x900F;&#x9636;&#x6BB5;&#x6A21;&#x5757;&#xFF0C;&#x5728;&#x83B7;&#x5F97;meterpreter&#x7684;shell&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x653B;&#x51FB;&#x4EE3;&#x7801;&#x3002;&#x6BD4;&#x5982;&#x5E38;&#x7528;&#x7684;hashdump&#x3001;arp_scanner&#x5C31;&#x5728;&#x8FD9;&#x91CC;&#x3002;</p>
+<h3 id="data"><a href="#data" class="headerlink" title="data"></a>data</h3><p>&#x5176;&#x6B21;&#x662F;data&#x76EE;&#x5F55;:</p>
+<p>&#x8FD9;&#x91CC;&#x5B58;&#x653E;&#x7684;&#x662F;metasploit&#x7684;&#x811A;&#x672C;&#x5F15;&#x7528;&#x6587;&#x4EF6;&#xFF0C;&#x91CD;&#x70B9;&#x4ECB;&#x7ECD;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x662F;data&#x4E0B;js&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;detect&#xFF0C;&#x8FD9;&#x91CC;&#x9762;&#x5B58;&#x653E;&#x7684;&#x662F;metasploit&#x7684;&#x63A2;&#x9488;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x770B;&#x8FC7;metasploit&#x6D4F;&#x89C8;&#x5668;&#x653B;&#x51FB;&#x811A;&#x672C;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;js&#x5E93;&#xFF0C;&#x7136;&#x540E;&#x68C0;&#x67E5;&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x662F;&#x5426;&#x7B26;&#x5408;&#x88AB;&#x653B;&#x51FB;&#x73AF;&#x5883;&#x3002;&#x5982;&#x679C;&#x7B26;&#x5408;&#x5219;&#x53D1;&#x9001;&#x653B;&#x51FB;&#x4EE3;&#x7801;&#xFF0C;&#x5426;&#x5219;&#x4E2D;&#x65AD;&#x3002;Memory&#x4E2D;&#x4E3B;&#x8981;&#x662F;&#x4E00;&#x4E9B;&#x5806;&#x55B7;&#x5C04;&#x4EE3;&#x7801;&#x3002;&#x5728;&#x5927;&#x90E8;&#x5206;&#x6D4F;&#x89C8;&#x5668;&#x6F0F;&#x6D1E;&#x5229;&#x7528;&#x8FC7;&#x7A0B;&#xFF0C;&#x5806;&#x55B7;&#x5C04;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x53EF;&#x6216;&#x7F3A;&#x7684;&#x8FC7;&#x7A0B;(&#x5F53;&#x7136;&#x4E0D;&#x662F;&#x7EDD;&#x5BF9;&#x7684;&#xFF01;)&#x3002;&#x5E76;&#x4E14;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x53CA;&#x7248;&#x672C;&#x95F4;&#xFF0C;&#x5806;&#x55B7;&#x5C04;&#x4EE3;&#x7801;&#x90FD;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7ED9;&#x51FA;&#x7684;&#x63A2;&#x9488;&#x4EE3;&#x7801;&#x548C;&#x5806;&#x55B7;&#x5C04;&#x4EE3;&#x7801;&#x662F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x597D;&#x7684;&#x5B66;&#x4E60;&#x8D44;&#x6E90;&#x5462;&#xFF1F; script</p>
+<p>&#x6700;&#x540E;&#x662F;msf&#x4E0B;script&#x76EE;&#x5F55;&#x4E2D;&#x7684;resource&#x76EE;&#x5F55;:</p>
+<p>&#x8FD9;&#x91CC;&#x7684;rc&#x811A;&#x672C;&#x76F8;&#x5F53;&#x4E8E;windows&#x4E0B;&#x7684;&#x6279;&#x5904;&#x7406;&#x811A;&#x672C;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x4FBF;&#x6377;&#x6027;&#x3002;&#x6BD4;&#x5982;Veil&#x5728;&#x751F;&#x6210;&#x514D;&#x6740;payload&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;rc&#x811A;&#x672C;&#xFF0C;&#x6B64;&#x65F6;&#x4F7F;&#x7528;msfconsole &#x2013;r xx.rc&#x4FBF;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x7684;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x548C;payload&#x5BF9;&#x5E94;&#x7684;handler&#xFF0C;&#x4EA6;&#x6216;&#x5728;&#x653B;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x4F60;&#x53CD;&#x590D;&#x7684;set exploit,&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6279;&#x5904;&#x7406;&#x811A;&#x672C;&#x4E86;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x5219;&#x662F;&#x4E00;&#x4E9B;&#x7ED9;&#x5B9A;&#x7684;rc&#x811A;&#x672C;&#xFF0C;&#x867D;&#x7136;&#x4F60;&#x53EF;&#x80FD;&#x4E0D;&#x4E60;&#x60EF;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x4F5C;&#x4E3A;&#x6539;&#x5199;&#x81EA;&#x5DF1;&#x7684;rc&#x811A;&#x672C;&#x7684;&#x8D44;&#x6E90;&#x4E5F;&#x4E0D;&#x9519;&#x3002;</p>
+<h2 id="0x03-metasploit&#x57FA;&#x672C;&#x547D;&#x4EE4;"><a href="#0x03-metasploit&#x57FA;&#x672C;&#x547D;&#x4EE4;" class="headerlink" title="0x03 metasploit&#x57FA;&#x672C;&#x547D;&#x4EE4;"></a>0x03 metasploit&#x57FA;&#x672C;&#x547D;&#x4EE4;</h2><hr>
+<p>&#x5217;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x6587;&#x7AE0;&#x4E2D;&#x4E0D;&#x5E38;&#x63D0;&#x5230;&#x7684;&#x547D;&#x4EE4;&#x6216;&#x8005;&#x662F;&#x6211;&#x7ECF;&#x5E38;&#x78B0;&#x5230;&#x6216;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="Msfpayload"><a href="#Msfpayload" class="headerlink" title="Msfpayload"></a>Msfpayload</h3><p>&#x8FD9;&#x662F;&#x6211;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x6765;&#x751F;&#x6210;payload&#x6216;&#x8005;shellcode&#x3002;</p>
+<p>&#x5728;&#x4E0D;&#x77E5;&#x9053;payload&#x540D;&#x79F0;&#x53C8;&#x4E0D;&#x60F3;&#x5F00;msfconsole&#x641C;&#x7D22;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x7528;<code>msfpayload &#x2013;l |grep &#x201C;windows&#x201D;</code> &#x8FD9;&#x6837;&#x7684;&#x547D;&#x4EE4;&#x67E5;&#x8BE2;&#x3002;</p>
+<p>-o &#x9009;&#x9879;&#x53EF;&#x4EE5;&#x5217;&#x51FA;payload&#x6240;&#x9700;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<h3 id="msfencode"><a href="#msfencode" class="headerlink" title="msfencode"></a>msfencode</h3><p>msf&#x4E2D;&#x7684;&#x7F16;&#x7801;&#x5668;&#xFF0C;&#x65E9;&#x671F;&#x4E3A;&#x4E86;&#x7F16;&#x7801;&#x7ED5;&#x8FC7;AV&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x5E38;&#x7528;msfpayload&#x4E0E;&#x5B83;&#x7F16;&#x7801;exploit&#x7684;&#x574F;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<h3 id="msfconsole"><a href="#msfconsole" class="headerlink" title="msfconsole"></a>msfconsole</h3><p>&#x5F00;&#x542F;metasploit&#x7684;console&#xFF0C;&#x6709;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x53C2;&#x6570; &#x2013;r&#xFF0C;&#x52A0;&#x8F7D;resources&#x811A;&#x672C;</p>
+<p>&#x6570;&#x636E;&#x5E93;&#x6709;&#x5173;&#x547D;&#x4EE4;</p>
+<h3 id="hosts"><a href="#hosts" class="headerlink" title="hosts"></a>hosts</h3><p>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;hosts&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x4E0B;&#x9762;&#x6709;&#x5217;&#x51FA;&#x3002;&#x6216;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;hosts &#x2013;S &#x201C;keyword&#x201D; &#x8FDB;&#x884C;&#x641C;&#x7D22;&#x3002;</p>
+<h3 id="Creds"><a href="#Creds" class="headerlink" title="Creds"></a>Creds</h3><p>Creds&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5217;&#x51FA;&#x6210;&#x529F;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5BC6;&#x7801;&#xFF0C;&#x5F00;&#x653E;&#x7AEF;&#x53E3;&#x53CA;&#x670D;&#x52A1;&#x7B49;&#x3002;</p>
+<h3 id="Console&#x4E2D;&#x6709;&#x5173;&#x547D;&#x4EE4;"><a href="#Console&#x4E2D;&#x6709;&#x5173;&#x547D;&#x4EE4;" class="headerlink" title="Console&#x4E2D;&#x6709;&#x5173;&#x547D;&#x4EE4;"></a>Console&#x4E2D;&#x6709;&#x5173;&#x547D;&#x4EE4;</h3><h3 id="search"><a href="#search" class="headerlink" title="search"></a>search</h3><p>&#x641C;&#x7D22;&#x4E00;&#x5207;&#x53EF;&#x4EE5;use&#x7684;&#x6A21;&#x5757;,&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F;search &#x76F4;&#x63A5;&#x52A0;&#x5173;&#x952E;&#x8BCD;&#xFF0C;&#x6BD4;&#x5982;search 08_067,&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;cve&#x7F16;&#x53F7;&#x67E5;&#x627E;&#x3002;&#x901A;&#x5E38;&#x7528;nessus&#x626B;&#x5230;&#x7684;&#x6F0F;&#x6D1E;&#x90FD;&#x6709;cve&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x641C;&#x7D22;&#x4E86;&#x3002;</p>
+<h3 id="spool"><a href="#spool" class="headerlink" title="spool"></a>spool</h3><p>&#x5C06;&#x5C4F;&#x5E55;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5728;&#x4F7F;&#x7528;HTTP&#x5F31;&#x53E3;&#x4EE4;&#x7834;&#x89E3;&#x3001;&#xFF0C;&#x5185;&#x7F51;http&#x76EE;&#x5F55;&#x7B49;&#x4E0D;&#x4F1A;&#x8BB0;&#x5F55;&#x5728;creds&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x65F6;&#x4F60;&#x600E;&#x6837;&#x89E3;&#x51B3;&#x67E5;&#x8BE2;&#x6210;&#x529F;&#x7ED3;&#x679C;&#x7684;&#xFF1F;&#x53CD;&#x6B63;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x6211;&#x5FEB;&#x8981;&#x75AF;&#x4E86;&#x3002; &#x8981;&#x4E0D;&#x5C31;&#x6539;&#x5199;exploit&#xFF0C;&#x4E0D;&#x6210;&#x529F;&#x4E0D;&#x6253;&#x5370;&#xFF0C;&#x8981;&#x4E0D;&#x5C31;&#x91CD;&#x5B9A;&#x5411;&#x4E4B;&#x540E;&#x81EA;&#x5DF1;&#x518D;grep&#x5427;&#x3002;&#x5982;&#x679C;&#x6709;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x5206;&#x4EAB;&#x554A;&#xFF01;</p>
+<h3 id="show-advanced"><a href="#show-advanced" class="headerlink" title="show advanced"></a>show advanced</h3><p><img src="http://www.dz110.xyz/wp-content/uploads/2019/09/19062913568b2bd764a5811604.png" alt></p>
+<p>&#x5728;&#x9009;&#x5B9A;&#x4E00;&#x4E2A;module(exploit,payload &#x2026;)&#x4E4B;&#x540E;&#xFF0C;&#x4F7F;&#x7528;show advanced&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x5173;&#x4E8E;&#x6B64;module&#x7684;&#x9AD8;&#x7EA7;&#x9009;&#x9879;&#xFF0C;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x201D;metasploit tricks and tips&#x201D;&#x4E2D;&#x5206;&#x4EAB;&#x3002;</p>
+<h2 id="0x04-&#x653B;&#x51FB;&#x793A;&#x4F8B;"><a href="#0x04-&#x653B;&#x51FB;&#x793A;&#x4F8B;" class="headerlink" title="0x04 &#x653B;&#x51FB;&#x793A;&#x4F8B;"></a>0x04 &#x653B;&#x51FB;&#x793A;&#x4F8B;</h2><hr>
+<p>&#x540C;&#x6837;&#x6211;&#x8FD8;&#x662F;&#x9009;&#x62E9;ms08_067&#x8FD9;&#x4E2A;&#x6F0F;&#x6D1E;&#xFF0C;&#x5E76;&#x4E14;&#x968F;&#x4FBF;&#x8F93;&#x5165;&#x4E00;&#x4E2A;ip&#xFF0C;&#x6F14;&#x793A;&#x4E0B;&#x6700;&#x57FA;&#x672C;&#x7684;&#x653B;&#x51FB;&#x8FC7;&#x7A0B;(&#x4E3A;&#x4E86;&#x8BA9;&#x57FA;&#x7840;&#x7BC7;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x5B8C;&#x6574;&#x70B9;)&#x7ED3;&#x675F;&#x57FA;&#x7840;&#x7BC7;&#x7684;&#x5206;&#x4EAB;&#x3002;&#x8BF4;&#x660E;:</p>
+<p><img src="http://www.dz110.xyz/wp-content/uploads/2019/09/1906291356f4647b4f5313a71c.png" alt></p>
+<p>&#x4ECE;&#x56FE;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x4E00;&#x6B21;&#x57FA;&#x672C;&#x7684;&#x653B;&#x51FB;&#x8FC7;&#x7A0B;&#x5927;&#x6982;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<p>1. &#x9009;&#x62E9;exploit (use exploit/windows/smb/ms08_067_netapi)<br>2. &#x9009;&#x62E9;payload<br>3. &#x8BBE;&#x7F6E;&#x53C2;&#x6570; (set RHOST,set LPORT &#x2026;)<br>4. &#x6267;&#x884C;&#x653B;&#x51FB;</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/01/hello-world-1/" rel="next" title="世界，您好！">
+                <i class="fa fa-chevron-left"></i> 世界，您好！
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/01/test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2019/09/01/web-e4-b8-ad-e9-97-b4-e4-bb-b6-e5-b8-b8-e8-a7-81-e6-bc-8f-e6-b4-9e-e6-80-bb-e7-bb-93/" data-title="Web中间件常见漏洞总结" data-url="http://www.dz119.com/2019/09/01/web-e4-b8-ad-e9-97-b4-e4-bb-b6-e5-b8-b8-e8-a7-81-e6-bc-8f-e6-b4-9e-e6-80-bb-e7-bb-93/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="sylar su">
+          <p class="site-author-name" itemprop="name">sylar su</p>
+          <p class="site-description motion-element" itemprop="description">我还是我，努力的自我</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00-背景"><span class="nav-number">1.</span> <span class="nav-text">0x00 背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-在kali中使用metasploit"><span class="nav-number">2.</span> <span class="nav-text">0x01 在kali中使用metasploit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-metasploit目录结构"><span class="nav-number">3.</span> <span class="nav-text">0x02 metasploit目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#modules"><span class="nav-number">3.1.</span> <span class="nav-text">modules</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data"><span class="nav-number">3.2.</span> <span class="nav-text">data</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-metasploit基本命令"><span class="nav-number">4.</span> <span class="nav-text">0x03 metasploit基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Msfpayload"><span class="nav-number">4.1.</span> <span class="nav-text">Msfpayload</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#msfencode"><span class="nav-number">4.2.</span> <span class="nav-text">msfencode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#msfconsole"><span class="nav-number">4.3.</span> <span class="nav-text">msfconsole</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hosts"><span class="nav-number">4.4.</span> <span class="nav-text">hosts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creds"><span class="nav-number">4.5.</span> <span class="nav-text">Creds</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Console中有关命令"><span class="nav-number">4.6.</span> <span class="nav-text">Console中有关命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search"><span class="nav-number">4.7.</span> <span class="nav-text">search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spool"><span class="nav-number">4.8.</span> <span class="nav-text">spool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#show-advanced"><span class="nav-number">4.9.</span> <span class="nav-text">show advanced</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-攻击示例"><span class="nav-number">5.</span> <span class="nav-text">0x04 攻击示例</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sylar su</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"su89"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("76riba09HSCHHo4DasKYBc2c-gzGzoHsz", "a3iTl0SR1FJrcVu1aP4ah8Oq");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

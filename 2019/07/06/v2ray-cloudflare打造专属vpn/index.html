@@ -6,15 +6,15 @@
 
 
 <html class="theme-next mist use-motion">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -63,42 +63,41 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="技术," />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="技术,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
 
 
 
 
 
 
-<meta name="description" content="@TOC
-&amp;#x6253;&amp;#x9020;&amp;#x4E13;&amp;#x5C5E;VPN&amp;#x8FD1;&amp;#x671F;&amp;#xFF0C;&amp;#x5C01;&amp;#x7981;ip&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#x8F83;&amp;#x4E3A;&amp;#x7A81;&amp;#x51FA;&amp;#x3002;&amp;#x53EA;&amp;#x6709;&amp;#x4E0D;&amp;#x65AD;&amp;#x7684;&amp;#x52AA;&amp;#x529">
+<meta name="description" content="@TOC &amp;#x6253;&amp;#x9020;&amp;#x4E13;&amp;#x5C5E;VPN&amp;#x8FD1;&amp;#x671F;&amp;#xFF0C;&amp;#x5C01;&amp;#x7981;ip&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#x8F83;&amp;#x4E3A;&amp;#x7A81;&amp;#x51FA;&amp;#x3002;&amp;#x53EA;&amp;#x6709;&amp;#x4E0D;&amp;#x65AD;&amp;#x7684;&amp;#x52AA;&amp;#x529">
+<meta name="keywords" content="技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="v2ray+cloudflare打造专属vpn">
 <meta property="og:url" content="http://www.dz119.com/2019/07/06/v2ray-cloudflare打造专属vpn/index.html">
 <meta property="og:site_name" content="非色的天">
-<meta property="og:description" content="@TOC
-&amp;#x6253;&amp;#x9020;&amp;#x4E13;&amp;#x5C5E;VPN&amp;#x8FD1;&amp;#x671F;&amp;#xFF0C;&amp;#x5C01;&amp;#x7981;ip&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#x8F83;&amp;#x4E3A;&amp;#x7A81;&amp;#x51FA;&amp;#x3002;&amp;#x53EA;&amp;#x6709;&amp;#x4E0D;&amp;#x65AD;&amp;#x7684;&amp;#x52AA;&amp;#x529">
+<meta property="og:description" content="@TOC &amp;#x6253;&amp;#x9020;&amp;#x4E13;&amp;#x5C5E;VPN&amp;#x8FD1;&amp;#x671F;&amp;#xFF0C;&amp;#x5C01;&amp;#x7981;ip&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#x8F83;&amp;#x4E3A;&amp;#x7A81;&amp;#x51FA;&amp;#x3002;&amp;#x53EA;&amp;#x6709;&amp;#x4E0D;&amp;#x65AD;&amp;#x7684;&amp;#x52AA;&amp;#x529">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190605222905951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190605223018758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70">
 <meta property="og:updated_time" content="2019-07-06T08:08:09.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2ray+cloudflare打造专属vpn">
-<meta name="twitter:description" content="@TOC
-&amp;#x6253;&amp;#x9020;&amp;#x4E13;&amp;#x5C5E;VPN&amp;#x8FD1;&amp;#x671F;&amp;#xFF0C;&amp;#x5C01;&amp;#x7981;ip&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#x8F83;&amp;#x4E3A;&amp;#x7A81;&amp;#x51FA;&amp;#x3002;&amp;#x53EA;&amp;#x6709;&amp;#x4E0D;&amp;#x65AD;&amp;#x7684;&amp;#x52AA;&amp;#x529">
+<meta name="twitter:description" content="@TOC &amp;#x6253;&amp;#x9020;&amp;#x4E13;&amp;#x5C5E;VPN&amp;#x8FD1;&amp;#x671F;&amp;#xFF0C;&amp;#x5C01;&amp;#x7981;ip&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#x8F83;&amp;#x4E3A;&amp;#x7A81;&amp;#x51FA;&amp;#x3002;&amp;#x53EA;&amp;#x6709;&amp;#x4E0D;&amp;#x65AD;&amp;#x7684;&amp;#x52AA;&amp;#x529">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190605222905951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70">
 
 
@@ -120,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://www.dz119.com/2019/07/06/v2ray-cloudflare打造专属vpn/"/>
+  <link rel="canonical" href="http://www.dz119.com/2019/07/06/v2ray-cloudflare打造专属vpn/">
 
   <title> v2ray+cloudflare打造专属vpn | 非色的天 </title>
 </head>
@@ -161,7 +160,7 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">非色的天</span>
       <span class="logo-line-after"><i></i></span>
@@ -188,7 +187,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -198,7 +197,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -208,7 +207,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -218,7 +217,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -231,7 +230,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -343,14 +342,16 @@
       
         <p>@<a href="&#x201C;&#x677F;&#x74E6;&#x5DE5;vps+v2ray+cloudflare&#x4E91;&#x52A0;&#x901F;&#x201D;&#x6253;&#x9020;&#x4E13;&#x5C5E;vpn">TOC</a></p>
 <h1 id="&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN"><a href="#&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN" class="headerlink" title="&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN"></a>&#x6253;&#x9020;&#x4E13;&#x5C5E;VPN</h1><p>&#x8FD1;&#x671F;&#xFF0C;&#x5C01;&#x7981;ip&#x7684;&#x60C5;&#x51B5;&#x8F83;&#x4E3A;&#x7A81;&#x51FA;&#x3002;&#x53EA;&#x6709;&#x4E0D;&#x65AD;&#x7684;&#x52AA;&#x529B;&#x624D;&#x80FD;&#x4F7F;&#x7528;vpn<br><a id="more"></a></p>
-<h2 id="&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS"><a href="#&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS" class="headerlink" title="&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS"></a>&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS</h2><p>&#x60F3;&#x8981;&#x642D;&#x5EFA; V2Ray&#xFF0C; &#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x4E2A;&#x4EBA; VPS&#xFF08;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#xFF09; &#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;<br>&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#xFF1A;&#x642C;&#x74E6;&#x5DE5;&#xFF08;Bandwagon Host&#xFF09; VPS &#x6765;&#x642D;&#x5EFA; V2Ray&#xFF0C;&#x642C;&#x74E6;&#x5DE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x4E2D;&#x56FD;&#x7528;&#x6237;&#x6781;&#x5EA6;&#x53CB;&#x597D;&#x7684; VPS &#x5546;&#x5BB6;&#xFF0C;&#x6709;&#x9999;&#x6E2F;&#xFF0C;&#x7F8E;&#x56FD;&#x6D1B;&#x6749;&#x77F6;CN2 &#x7B49;&#x7EBF;&#x8DEF;&#x4E0E;cloudflare&#x65E0;&#x7F1D;&#x5BF9;&#x63A5;&#xFF0C;&#x652F;&#x6301;&#x652F;&#x4ED8;&#x5B9D;&#x4ED8;&#x6B3E;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x662F;&#x652F;&#x6301;&#x9000;&#x6B3E;&#x7684;&#xFF01;<br><img src="https://img-blog.csdnimg.cn/20190605222905951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70" alt="&#x5B89;&#x88C5;debian9&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"><br><img src="https://img-blog.csdnimg.cn/20190605223018758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70" alt="&#x83B7;&#x53D6;vps&#x7684;&#x767B;&#x9646;&#x7AEF;&#x53E3;&#x548C;&#x767B;&#x9646;&#x5BC6;&#x7801;"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;shadowsocks&#xFF0C;&#x53EF;&#x7559;&#x5B58;&#x4F46;&#x65E0;&#x592A;&#x5927;&#x610F;&#x4E49;&#xFF0C;&#x56E0;&#x4E3A;ss&#x4E5F;&#x4F1A;&#x88AB;&#x5C01;&#x4E86;</span></div><div class="line">wget --no-check-certificate -O shadowsocks-libev.sh https:<span class="comment">//raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh &amp;&amp; bash shadowsocks-libev.sh</span></div></pre></td></tr></table></figure></p>
-<h2 id="xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5;-V2Ray"><a href="#xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5;-V2Ray" class="headerlink" title="xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5; V2Ray"></a>xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5; V2Ray</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;v2ray</span></div><div class="line">bash &lt;(curl -s -L https:<span class="comment">//git.io/v2ray.sh)</span></div></pre></td></tr></table></figure>
+<h2 id="&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS"><a href="#&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS" class="headerlink" title="&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS"></a>&#x8D2D;&#x4E70;&#x4E2A;&#x4EBA;VPS</h2><p>&#x60F3;&#x8981;&#x642D;&#x5EFA; V2Ray&#xFF0C; &#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x4E2A;&#x4EBA; VPS&#xFF08;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#xFF09; &#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;<br>&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#xFF1A;&#x642C;&#x74E6;&#x5DE5;&#xFF08;Bandwagon Host&#xFF09; VPS &#x6765;&#x642D;&#x5EFA; V2Ray&#xFF0C;&#x642C;&#x74E6;&#x5DE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x4E2D;&#x56FD;&#x7528;&#x6237;&#x6781;&#x5EA6;&#x53CB;&#x597D;&#x7684; VPS &#x5546;&#x5BB6;&#xFF0C;&#x6709;&#x9999;&#x6E2F;&#xFF0C;&#x7F8E;&#x56FD;&#x6D1B;&#x6749;&#x77F6;CN2 &#x7B49;&#x7EBF;&#x8DEF;&#x4E0E;cloudflare&#x65E0;&#x7F1D;&#x5BF9;&#x63A5;&#xFF0C;&#x652F;&#x6301;&#x652F;&#x4ED8;&#x5B9D;&#x4ED8;&#x6B3E;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x662F;&#x652F;&#x6301;&#x9000;&#x6B3E;&#x7684;&#xFF01;<br><img src="https://img-blog.csdnimg.cn/20190605222905951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70" alt="&#x5B89;&#x88C5;debian9&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"><br><img src="https://img-blog.csdnimg.cn/20190605223018758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4MjM4MDY=,size_16,color_FFFFFF,t_70" alt="&#x83B7;&#x53D6;vps&#x7684;&#x767B;&#x9646;&#x7AEF;&#x53E3;&#x548C;&#x767B;&#x9646;&#x5BC6;&#x7801;"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;shadowsocks&#xFF0C;&#x53EF;&#x7559;&#x5B58;&#x4F46;&#x65E0;&#x592A;&#x5927;&#x610F;&#x4E49;&#xFF0C;&#x56E0;&#x4E3A;ss&#x4E5F;&#x4F1A;&#x88AB;&#x5C01;&#x4E86;</span></span><br><span class="line">wget --no-check-certificate -O shadowsocks-libev.sh https:<span class="comment">//raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh &amp;&amp; bash shadowsocks-libev.sh</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5;-V2Ray"><a href="#xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5;-V2Ray" class="headerlink" title="xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5; V2Ray"></a>xshell&#x767B;&#x9646;&#x670D;&#x52A1;&#x5668;&#x53CA;&#x5B89;&#x88C5; V2Ray</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;v2ray</span></span><br><span class="line">bash &lt;(curl -s -L https:<span class="comment">//git.io/v2ray.sh)</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>&#x5982;&#x679C;&#x63D0;&#x793A; curl: command not found &#xFF0C;&#x90A3;&#x662F;&#x56E0;&#x4E3A;&#x4F60;&#x7684; VPS &#x6CA1;&#x88C5; Curl<br>ubuntu/debian &#x7CFB;&#x7EDF;&#x5B89;&#x88C5; Curl &#x65B9;&#x6CD5;: apt-get update -y &amp;&amp; apt-get install curl -y<br>centos &#x7CFB;&#x7EDF;&#x5B89;&#x88C5; Curl &#x65B9;&#x6CD5;: yum update -y &amp;&amp; yum install curl -y<br>&#x5B89;&#x88C5;&#x597D; curl &#x4E4B;&#x540E;&#x5C31;&#x80FD;&#x5B89;&#x88C5;&#x811A;&#x672C;&#x4E86;</p>
+</blockquote>
+<blockquote>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5B89;&#x88C5;netstat&#x547D;&#x4EE4;</p>
 </blockquote>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;netstat</span></div><div class="line">apt-get install net-tools</div></pre></td></tr></table></figure>
-<h2 id="&#x6CE8;&#x518C;freenom-com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"><a href="#&#x6CE8;&#x518C;freenom-com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;" class="headerlink" title="&#x6CE8;&#x518C;freenom.com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"></a>&#x6CE8;&#x518C;freenom.com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;</h2><p>&#x5728; DNS &#x9009;&#x9879;&#x5361;&#x90A3;&#x8FB9;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; A &#x8BB0;&#x5F55;&#x7684;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x5047;&#x8BBE;&#x4F60;&#x7684;&#x57DF;&#x540D;&#x662F; 233blog.com&#xFF0C;&#x5E76;&#x4E14;&#x60F3;&#x8981;&#x4F7F;&#x7528; www.233blog.com &#x4F5C;&#x4E3A;&#x7FFB;&#x5899;&#x7684;&#x57DF;&#x540D;&#x3002;&#x90A3;&#x4E48;&#x5728; DNS &#x90A3;&#x91CC;&#x914D;&#x7F6E;&#xFF0C;Name &#x5199; www&#xFF0C;IPv4 address &#x5199;&#x4F60;&#x7684; VPS IP&#xFF0C;&#x52A1;&#x5FC5;&#x628A;&#x4E91;&#x6735;&#x70B9;&#x7070;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9; Add Record &#x6765;&#x6DFB;&#x52A0;&#x89E3;&#x6790;&#x8BB0;&#x5F55;&#x5373;&#x53EF;&#x3002;(&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x8BF7;&#x52A1;&#x5FC5;&#x628A;&#x4E91;&#x6735;&#x70B9;&#x7070;&#xFF0C;&#x5373;&#x662F; DNS only)</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x4E00;&#x952E;&#x5B89;&#x88C5;netstat</span></span><br><span class="line">apt-<span class="keyword">get</span> install net-tools</span><br></pre></td></tr></table></figure>
+<h2 id="&#x6CE8;&#x518C;freenom-com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"><a href="#&#x6CE8;&#x518C;freenom-com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;" class="headerlink" title="&#x6CE8;&#x518C;freenom.com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;"></a>&#x6CE8;&#x518C;freenom.com&#x514D;&#x8D39;&#x57DF;&#x540D;&#x548C;&#x5728;cloudflare&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;</h2><p>&#x5728; DNS &#x9009;&#x9879;&#x5361;&#x90A3;&#x8FB9;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; A &#x8BB0;&#x5F55;&#x7684;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x5047;&#x8BBE;&#x4F60;&#x7684;&#x57DF;&#x540D;&#x662F; 233blog.com&#xFF0C;&#x5E76;&#x4E14;&#x60F3;&#x8981;&#x4F7F;&#x7528; <a href="http://www.233blog.com" target="_blank" rel="noopener">www.233blog.com</a> &#x4F5C;&#x4E3A;&#x7FFB;&#x5899;&#x7684;&#x57DF;&#x540D;&#x3002;&#x90A3;&#x4E48;&#x5728; DNS &#x90A3;&#x91CC;&#x914D;&#x7F6E;&#xFF0C;Name &#x5199; www&#xFF0C;IPv4 address &#x5199;&#x4F60;&#x7684; VPS IP&#xFF0C;&#x52A1;&#x5FC5;&#x628A;&#x4E91;&#x6735;&#x70B9;&#x7070;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9; Add Record &#x6765;&#x6DFB;&#x52A0;&#x89E3;&#x6790;&#x8BB0;&#x5F55;&#x5373;&#x53EF;&#x3002;(&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x8BF7;&#x52A1;&#x5FC5;&#x628A;&#x4E91;&#x6735;&#x70B9;&#x7070;&#xFF0C;&#x5373;&#x662F; DNS only)</p>
 <h2 id="&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket-TLS"><a href="#&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket-TLS" class="headerlink" title="&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket + TLS"></a>&#x7EE7;&#x7EED;&#x5B89;&#x88C5;WebSocket + TLS</h2><p>&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x9009;&#x62E9; WebSocket + TLS (&#x5373;&#x662F;&#x9009;&#x62E9; 4 )&#xFF0C;V2Ray &#x7AEF;&#x53E3;&#x968F;&#x4FBF;&#xFF0C;&#x4E0D;&#x8981;&#x662F; 80 &#x548C; 443 &#x5373;&#x53EF;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x57DF;&#x540D;&#x89E3;&#x6790; Y &#xFF0C;&#x81EA;&#x52A8;&#x914D;&#x7F6E; TLS &#x4E5F;&#x662F; Y &#xFF0C;&#x5176;&#x4ED6;&#x5C31;&#x9ED8;&#x8BA4;&#x5427;&#xFF0C;&#x4E00;&#x8DEF;&#x56DE;&#x8F66;&#x3002;&#x7B49;&#x5F85;&#x5B89;&#x88C5;&#x5B8C;&#x6210;<br>&#x5982;&#x679C;&#x4F60;&#x7684;&#x57DF;&#x540D;&#x6CA1;&#x6709;&#x6B63;&#x786E;&#x89E3;&#x6790;&#xFF0C;&#x5B89;&#x88C5;&#x4F1A;&#x5931;&#x8D25;&#xFF0C;&#x89E3;&#x6790;&#x76F8;&#x5173;&#x770B;&#x4E0A;&#x9762;&#x7684; &#x6DFB;&#x52A0;&#x57DF;&#x540D;&#x89E3;&#x6790;</p>
 <p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x5C55;&#x793A; V2Ray &#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#x7B49;&#xFF0C;&#x4E0D;&#x7528;&#x7BA1;&#x5B83;&#xFF0C;&#x76F4;&#x63A5;&#x56DE;&#x8F66;</p>
 <p>&#x7136;&#x540E;&#x8F93;&#x5165; v2ray status &#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD; V2Ray &#x548C; Caddy &#x90FD;&#x5728;&#x8FD0;&#x884C;</p>
@@ -396,6 +397,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/09/01/hello-world-1/" rel="prev" title="世界，您好！">
+                世界，您好！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -423,7 +428,7 @@
   <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
   <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/javascript" >
+<script type="text/javascript">
   var jiathis_config={
     hideMore:false
   }
@@ -443,8 +448,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2019/07/06/v2ray-cloudflare打造专属vpn/"
-           data-title="v2ray+cloudflare打造专属vpn" data-url="http://www.dz119.com/2019/07/06/v2ray-cloudflare打造专属vpn/">
+      <div class="ds-thread" data-thread-key="2019/07/06/v2ray-cloudflare打造专属vpn/" data-title="v2ray+cloudflare打造专属vpn" data-url="http://www.dz119.com/2019/07/06/v2ray-cloudflare打造专属vpn/">
       </div>
     
   </div>
@@ -469,7 +473,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -480,20 +484,25 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="sylar su" />
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="sylar su">
           <p class="site-author-name" itemprop="name">sylar su</p>
           <p class="site-description motion-element" itemprop="description">我还是我，努力的自我</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
           
 
           
@@ -544,7 +553,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2016 - 
   <span itemprop="copyrightYear">2019</span>
